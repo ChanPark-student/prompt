@@ -1,0 +1,23 @@
+# Dependencies
+node_modules
+
+# Next.js
+.next/
+next-env.d.ts
+*.log
+.env.local
+.env.*.local
+
+# Python
+.prompt/
+backend/.promptB/
+backend/__pycache__/
+*.pyc
+*.pyo
+
+# Misc
+.DS_Store
+*~
+npm-debug.log*
+yarn-error.log
+talking.txt

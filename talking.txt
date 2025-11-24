@@ -1,0 +1,5 @@
+$ uvicorn backend.main:app --reload
+INFO:     Will watch for changes in these directories: ['C:\\Users\\USER\\Desktop\\prompt']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [1080] using WatchFiles
+ERROR:    Error loading ASGI app. Could not import module "backend.main".
