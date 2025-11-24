@@ -1,19 +1,27 @@
 # Dependencies
 node_modules
 
+# Build output
+dist/
+build/
+
 # Next.js
 .next/
 next-env.d.ts
 *.log
+.env
 .env.local
 .env.*.local
 
 # Python
 .prompt/
 backend/.promptB/
-backend/__pycache__/
+__pycache__/
 *.pyc
 *.pyo
+
+# Database
+sql_app.db
 
 # Misc
 .DS_Store
@@ -21,3 +29,4 @@ backend/__pycache__/
 npm-debug.log*
 yarn-error.log
 talking.txt
+cli_prompt.txt

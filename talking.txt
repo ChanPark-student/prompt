@@ -1,5 +1,73 @@
+(.promptB) 
+USER@DESKTOP-8GGLCVB MINGW64 ~/Desktop/prompt (main)
 $ uvicorn backend.main:app --reload
 INFO:     Will watch for changes in these directories: ['C:\\Users\\USER\\Desktop\\prompt']
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [1080] using WatchFiles
-ERROR:    Error loading ASGI app. Could not import module "backend.main".
+INFO:     Started reloader process [20732] using WatchFiles
+INFO:     Started server process [7832]
+INFO:     Waiting for application startup.
+ERROR:    Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.DatabaseError: database disk image is malformed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\starlette\routing.py", line 694, in lifespan
+    async with self.lifespan_context(app) as maybe_state:
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\starlette\routing.py", line 571, in __aenter__
+    await self._router.startup()
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\starlette\routing.py", line 673, in startup
+    handler()
+  File "C:\Users\USER\Desktop\prompt\backend\main.py", line 41, in on_startup
+    create_db_and_tables()
+  File "C:\Users\USER\Desktop\prompt\backend\database.py", line 49, in create_db_and_tables
+    Base.metadata.create_all(bind=engine)
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\sql\schema.py", line 5928, in create_all
+    bind._run_ddl_visitor(
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\engine\base.py", line 3252, in _run_ddl_visitor
+    conn._run_ddl_visitor(visitorcallable, element, **kwargs)
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\engine\base.py", line 2459, in _run_ddl_visitor
+    ).traverse_single(element)
+      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\sql\visitors.py", line 661, in traverse_single
+    return meth(obj, **kw)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\sql\ddl.py", line 963, in visit_metadata
+    [t for t in tables if self._can_create_table(t)]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\sql\ddl.py", line 928, in _can_create_table
+    return not self.checkfirst or not self.dialect.has_table(
+                                      ^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in has_table
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\engine\reflection.py", line 89, in cache
+    return fn(self, con, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 2324, in has_table
+    info = self._get_table_pragma(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\dialects\sqlite\base.py", line 2965, in _get_table_pragma
+    cursor = connection.exec_driver_sql(statement)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\engine\base.py", line 1779, in exec_driver_sql
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\USER\Desktop\prompt\backend\.promptB\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
+[SQL: PRAGMA main.table_info("users")]
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+
+ERROR:    Application startup failed. Exiting.

@@ -14,126 +14,116 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
 "use client";
 ;
-// --- API Configuration ---
 const API_URL = "http://127.0.0.1:8000";
-// --- Auth Context ---
 const AuthContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createContext"])(undefined);
 const AuthProvider = ({ children })=>{
     _s();
     const [user, setUser] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    const [userProfile, setUserProfile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null) // Kept for now
-    ;
+    const [token, setToken] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
+        "AuthProvider.useState": ()=>{
+            if ("TURBOPACK compile-time truthy", 1) {
+                return localStorage.getItem('authToken');
+            }
+            //TURBOPACK unreachable
+            ;
+        }
+    }["AuthProvider.useState"]);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
-    // Effect to restore login state from token on initial load
+    // --- Helper function to get user profile after login ---
+    const fetchUserProfile = async (authToken)=>{
+        // This endpoint needs to be created on the backend
+        // It should take a token and return the user's profile
+        const response = await fetch(`${API_URL}/users/me`, {
+            headers: {
+                'Authorization': `Bearer ${authToken}`
+            }
+        });
+        if (!response.ok) {
+            throw new Error("Failed to fetch user profile.");
+        }
+        const profile = await response.json();
+        setUser(profile);
+        localStorage.setItem('userProfile', JSON.stringify(profile));
+    };
+    // [Login Persistence] Fetch user profile if a token exists
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "AuthProvider.useEffect": ()=>{
-            const restoreLogin = {
-                "AuthProvider.useEffect.restoreLogin": async ()=>{
-                    const token = localStorage.getItem('accessToken');
+            const loadUser = {
+                "AuthProvider.useEffect.loadUser": async ()=>{
                     if (token) {
                         try {
-                            const response = await fetch(`${API_URL}/users/me/`, {
-                                headers: {
-                                    'Authorization': `Bearer ${token}`
-                                }
-                            });
-                            if (response.ok) {
-                                const userData = await response.json();
-                                setUser(userData);
-                            // TODO: Fetch user profile data here and set it to userProfile state
-                            } else {
-                                // Token is invalid or expired
-                                localStorage.removeItem('accessToken');
-                            }
+                            await fetchUserProfile(token);
                         } catch (error) {
-                            console.error("Failed to restore session:", error);
-                            localStorage.removeItem('accessToken');
+                            console.error(error);
+                            logout(); // If token is invalid, logout
                         }
                     }
                     setLoading(false);
                 }
-            }["AuthProvider.useEffect.restoreLogin"];
-            restoreLogin();
+            }["AuthProvider.useEffect.loadUser"];
+            loadUser();
         }
-    }["AuthProvider.useEffect"], []);
-    // --- Real Authentication Functions ---
+    }["AuthProvider.useEffect"], [
+        token
+    ]);
     const login = async (email, pass)=>{
         setLoading(true);
-        try {
-            const params = new URLSearchParams();
-            params.append('username', email);
-            params.append('password', pass);
-            const response = await fetch(`${API_URL}/token`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: params
-            });
-            if (!response.ok) {
-                throw new Error("아이디 또는 비밀번호가 일치하지 않습니다.");
-            }
-            const data = await response.json();
-            localStorage.setItem('accessToken', data.access_token);
-            // Fetch user data after successful login
-            const userResponse = await fetch(`${API_URL}/users/me/`, {
-                headers: {
-                    'Authorization': `Bearer ${data.access_token}`
-                }
-            });
-            if (!userResponse.ok) {
-                throw new Error("로그인 후 사용자 정보를 가져오는데 실패했습니다.");
-            }
-            const userData = await userResponse.json();
-            setUser(userData);
-        // TODO: Fetch or set user profile data
-        } finally{
+        const response = await fetch(`${API_URL}/token`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: email,
+                password: pass
+            })
+        });
+        if (!response.ok) {
+            const errorData = await response.json();
             setLoading(false);
+            throw new Error(errorData.detail || "Login failed.");
         }
+        const data = await response.json();
+        const newToken = data.access_token;
+        setToken(newToken);
+        localStorage.setItem('authToken', newToken);
+        // After getting the token, fetch the full user profile
+        await fetchUserProfile(newToken);
+        setLoading(false);
     };
     const signupAndCreateProfile = async (email, pass, profileData)=>{
         setLoading(true);
-        try {
-            const response = await fetch(`${API_URL}/users/`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    email: email,
-                    password: pass,
-                    ...profileData
-                })
-            });
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.detail || "회원가입에 실패했습니다.");
-            }
-            // After successful signup, log the user in
-            await login(email, pass);
-            // TODO: Save the rest of the profileData (name, school, etc.) 
-            // to the backend via a new endpoint e.g. PUT /users/me/profile
-            // For now, just setting it locally
-            setUserProfile({
-                ...profileData,
-                email
-            });
-        } finally{
+        const signupPayload = {
+            username: profileData.name,
+            email: email,
+            password: pass,
+            ...profileData
+        };
+        const response = await fetch(`${API_URL}/signup`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(signupPayload)
+        });
+        if (!response.ok) {
+            const errorData = await response.json();
             setLoading(false);
+            throw new Error(errorData.detail || "Signup failed.");
         }
-    };
-    const logout = async ()=>{
-        setLoading(true);
-        setUser(null);
-        setUserProfile(null);
-        localStorage.removeItem('accessToken');
-        // No need for network request, just clear local state and token
-        await new Promise((resolve)=>setTimeout(resolve, 100)); // Simulate a small delay
+        // If signup is successful, log the user in automatically
+        await login(email, pass);
         setLoading(false);
+    };
+    const logout = ()=>{
+        setUser(null);
+        setToken(null);
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('userProfile');
     };
     const value = {
         user,
-        userProfile,
+        token,
         loading,
         login,
         signupAndCreateProfile,
@@ -144,11 +134,11 @@ const AuthProvider = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/lib/auth-context.tsx",
-        lineNumber: 168,
+        lineNumber: 153,
         columnNumber: 10
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(AuthProvider, "WycvliXlKHiFjN+6Nj63IB/wNNM=");
+_s(AuthProvider, "MoyOCJUdci80EdmL5maLsnxhQhQ=");
 _c = AuthProvider;
 const useAuth = ()=>{
     _s1();
@@ -157,7 +147,8 @@ const useAuth = ()=>{
         throw new Error('useAuth must be used within an AuthProvider');
     }
     return context;
-};
+}; // A new endpoint /users/me needs to be added to the backend
+ // to get the current user's profile from a token.
 _s1(useAuth, "b9L3QQ+jgeyIrH0NfHrJ8nn7VMU=");
 var _c;
 __turbopack_context__.k.register(_c, "AuthProvider");
