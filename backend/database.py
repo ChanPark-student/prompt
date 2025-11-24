@@ -1,5 +1,5 @@
-from sqlalchemy import create_engine, Column, Integer, String, Boolean, DateTime
-from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy import create_engine, Column, Integer, String, Boolean, DateTime, ForeignKey, Text
+from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 from datetime import datetime
 import os
 
@@ -18,6 +18,19 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 # Create a Base class for declarative models
 Base = declarative_base()
 
+# Define the Prompt model
+class Prompt(Base):
+    __tablename__ = "prompts"
+
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String, index=True)
+    content = Column(Text, index=True)
+    subject = Column(String, index=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+    owner_id = Column(Integer, ForeignKey("users.id"))
+
+    owner = relationship("User", back_populates="prompts")
+
 # Define the User model
 class User(Base):
     __tablename__ = "users"
@@ -35,6 +48,8 @@ class User(Base):
     age = Column(String, nullable=True)
     school = Column(String, nullable=True)
     studentId = Column(String, name="student_id", nullable=True) # Use 'student_id' as column name for convention
+
+    prompts = relationship("Prompt", back_populates="owner")
 
 # Function to get a database session
 def get_db():

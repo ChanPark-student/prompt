@@ -1,6 +1,23 @@
 from pydantic import BaseModel, EmailStr
-from typing import Optional
+from typing import Optional, List
 from datetime import datetime
+
+# Pydantic schema for Prompt
+class PromptBase(BaseModel):
+    title: str
+    content: str
+    subject: str
+
+class PromptCreate(PromptBase):
+    pass
+
+class Prompt(PromptBase):
+    id: int
+    owner_id: int
+    created_at: datetime
+
+    class Config:
+        from_attributes = True
 
 class UserBase(BaseModel):
     username: str
@@ -29,6 +46,7 @@ class UserResponse(BaseModel):
     age: Optional[str]
     school: Optional[str]
     studentId: Optional[str]
+    prompts: List[Prompt] = []
 
     class Config:
         from_attributes = True

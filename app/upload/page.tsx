@@ -6,6 +6,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import AuthModal from "@/components/auth-modal"
 import { useAuth } from "@/lib/auth-context" // 2. '전역 관리자' import
+import { Category, subjects } from "@/lib/subjects"
 
 export default function UploadPage() {
   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
@@ -19,12 +20,13 @@ export default function UploadPage() {
 
   const [title, setTitle] = useState("")
   const [content, setContent] = useState("")
+  const [selectedSubject, setSelectedSubject] = useState(""); // Add this line
   const [showSuccess, setShowSuccess] = useState(false) // 5. 'alert' 대신 사용할 성공 메시지 상태
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // TODO: 여기에 실제 업로드 로직(예: API 호출)을 추가합니다.
-    console.log("Uploading:", { title, content })
+    console.log("Uploading:", { title, content, selectedSubject })
 
     // 6. 'alert' 대신 성공 메시지 표시
     setShowSuccess(true)
@@ -87,6 +89,24 @@ export default function UploadPage() {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9DB78C]"
                   required
                 />
+              </div>
+
+              <div>
+                <label htmlFor="subject-select" className="block text-sm font-medium text-gray-700 mb-2">과목</label>
+                <select
+                  id="subject-select"
+                  value={selectedSubject}
+                  onChange={(e) => setSelectedSubject(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9DB78C]"
+                  required
+                >
+                  <option value="" disabled>과목을 선택하세요</option>
+                  {subjects.map((subject) => (
+                    <option key={subject.id} value={subject.id}>
+                      {subject.name}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <div>

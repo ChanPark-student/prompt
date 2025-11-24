@@ -3,9 +3,10 @@ from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 from sqlalchemy import or_
 from datetime import datetime, timedelta
+from typing import List
 
-from backend.database import get_db, create_db_and_tables, User
-from backend.schemas import UserCreate, UserResponse, UserLogin, Token
+from backend import database as models, schemas
+from backend.database import get_db, create_db_and_tables
 from backend.auth import get_password_hash, verify_password, create_access_token, verify_access_token
 
 from fastapi.middleware.cors import CORSMiddleware
@@ -31,7 +32,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
         headers={"WWW-Authenticate": "Bearer"},
     )
     username = verify_access_token(token, credentials_exception)
-    user = db.query(User).filter(User.username == username).first()
+    user = db.query(models.User).filter(models.User.username == username).first()
     if user is None:
         raise credentials_exception
     return user
@@ -45,9 +46,9 @@ def on_startup():
 def read_root():
     return {"Hello": "World"}
 
-@app.post("/signup", response_model=UserResponse, status_code=status.HTTP_201_CREATED)
-def signup(user: UserCreate, db: Session = Depends(get_db)):
-    db_user = db.query(User).filter(or_(User.username == user.username, User.email == user.email)).first()
+@app.post("/signup", response_model=schemas.UserResponse, status_code=status.HTTP_201_CREATED)
+def signup(user: schemas.UserCreate, db: Session = Depends(get_db)):
+    db_user = db.query(models.User).filter(or_(models.User.username == user.username, models.User.email == user.email)).first()
     if db_user:
         if db_user.username == user.username:
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Username already registered")
@@ -56,7 +57,7 @@ def signup(user: UserCreate, db: Session = Depends(get_db)):
 
     hashed_password = get_password_hash(user.password)
     
-    new_user = User(
+    new_user = models.User(
         username=user.username,
         email=user.email,
         hashed_password=hashed_password,
@@ -73,10 +74,10 @@ def signup(user: UserCreate, db: Session = Depends(get_db)):
     db.refresh(new_user)
     return new_user
 
-@app.post("/token", response_model=Token)
-async def login_for_access_token(login_data: UserLogin, db: Session = Depends(get_db)):
-    user = db.query(User).filter(
-        or_(User.username == login_data.username, User.email == login_data.username)
+@app.post("/token", response_model=schemas.Token)
+async def login_for_access_token(login_data: schemas.UserLogin, db: Session = Depends(get_db)):
+    user = db.query(models.User).filter(
+        or_(models.User.username == login_data.username, models.User.email == login_data.username)
     ).first()
     if not user or not verify_password(login_data.password, user.hashed_password):
         raise HTTPException(
@@ -90,6 +91,23 @@ async def login_for_access_token(login_data: UserLogin, db: Session = Depends(ge
     )
     return {"access_token": access_token, "token_type": "bearer"}
 
-@app.get("/users/me", response_model=UserResponse)
-async def read_users_me(current_user: User = Depends(get_current_user)):
+@app.get("/users/me", response_model=schemas.UserResponse)
+async def read_users_me(current_user: models.User = Depends(get_current_user)):
     return current_user
+
+@app.post("/prompts/", response_model=schemas.Prompt)
+def create_prompt(
+    prompt: schemas.PromptCreate,
+    db: Session = Depends(get_db),
+    current_user: models.User = Depends(get_current_user),
+):
+    db_prompt = models.Prompt(**prompt.dict(), owner_id=current_user.id)
+    db.add(db_prompt)
+    db.commit()
+    db.refresh(db_prompt)
+    return db_prompt
+
+@app.get("/prompts/", response_model=List[schemas.Prompt])
+def read_prompts(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    prompts = db.query(models.Prompt).offset(skip).limit(limit).all()
+    return prompts

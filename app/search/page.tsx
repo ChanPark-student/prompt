@@ -7,12 +7,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import AuthModal from "@/components/auth-modal"
 import { useAuth } from "@/lib/auth-context"
-
-interface Category {
-  id: string
-  name: string
-  path: string
-}
+import { Category, subjects } from "@/lib/subjects"
 
 export default function SearchPage() {
   const searchParams = useSearchParams()
@@ -24,11 +19,6 @@ export default function SearchPage() {
   
   // 2. 'step' 상태 로직을 완전히 제거했습니다.
 
-  const subjects: Category[] = [
-    { id: "1", name: "산업공학입문", path: "/prompts/1" },
-    { id: "2", name: "경제성공학", path: "/prompts/2" },
-    { id: "3", name: "확률통계", path: "/prompts/3" },
-  ]
 
   if (loading) {
     return (

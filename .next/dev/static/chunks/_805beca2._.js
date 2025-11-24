@@ -381,8 +381,7 @@ function AuthModal({ mode, onClose }) {
                                     value: password,
                                     onChange: (e)=>setPassword(e.target.value),
                                     className: "w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm",
-                                    required: true,
-                                    maxLength: 72
+                                    required: true
                                 }, void 0, false, {
                                     fileName: "[project]/components/auth-modal.tsx",
                                     lineNumber: 136,
@@ -401,7 +400,7 @@ function AuthModal({ mode, onClose }) {
                             children: loading ? '처리 중...' : currentMode === 'login' ? '로그인' : '다음'
                         }, void 0, false, {
                             fileName: "[project]/components/auth-modal.tsx",
-                            lineNumber: 145,
+                            lineNumber: 144,
                             columnNumber: 13
                         }, this)
                     ]
@@ -418,7 +417,7 @@ function AuthModal({ mode, onClose }) {
                             children: "마지막 단계입니다. 프로필을 완성해 주세요."
                         }, void 0, false, {
                             fileName: "[project]/components/auth-modal.tsx",
-                            lineNumber: 162,
+                            lineNumber: 161,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -432,7 +431,7 @@ function AuthModal({ mode, onClose }) {
                                             children: "이름"
                                         }, void 0, false, {
                                             fileName: "[project]/components/auth-modal.tsx",
-                                            lineNumber: 167,
+                                            lineNumber: 166,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -444,13 +443,13 @@ function AuthModal({ mode, onClose }) {
                                             required: true
                                         }, void 0, false, {
                                             fileName: "[project]/components/auth-modal.tsx",
-                                            lineNumber: 168,
+                                            lineNumber: 167,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/auth-modal.tsx",
-                                    lineNumber: 166,
+                                    lineNumber: 165,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -461,7 +460,7 @@ function AuthModal({ mode, onClose }) {
                                             children: "성별"
                                         }, void 0, false, {
                                             fileName: "[project]/components/auth-modal.tsx",
-                                            lineNumber: 171,
+                                            lineNumber: 170,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -476,7 +475,7 @@ function AuthModal({ mode, onClose }) {
                                                     children: "선택"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/auth-modal.tsx",
-                                                    lineNumber: 173,
+                                                    lineNumber: 172,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -484,7 +483,7 @@ function AuthModal({ mode, onClose }) {
                                                     children: "남성"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/auth-modal.tsx",
-                                                    lineNumber: 174,
+                                                    lineNumber: 173,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -492,7 +491,7 @@ function AuthModal({ mode, onClose }) {
                                                     children: "여성"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/auth-modal.tsx",
-                                                    lineNumber: 175,
+                                                    lineNumber: 174,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -500,25 +499,25 @@ function AuthModal({ mode, onClose }) {
                                                     children: "기타"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/auth-modal.tsx",
-                                                    lineNumber: 176,
+                                                    lineNumber: 175,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/auth-modal.tsx",
-                                            lineNumber: 172,
+                                            lineNumber: 171,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/auth-modal.tsx",
-                                    lineNumber: 170,
+                                    lineNumber: 169,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/auth-modal.tsx",
-                            lineNumber: 165,
+                            lineNumber: 164,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -529,7 +528,7 @@ function AuthModal({ mode, onClose }) {
                                     children: "나이"
                                 }, void 0, false, {
                                     fileName: "[project]/components/auth-modal.tsx",
-                                    lineNumber: 181,
+                                    lineNumber: 180,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -541,13 +540,13 @@ function AuthModal({ mode, onClose }) {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/components/auth-modal.tsx",
-                                    lineNumber: 182,
+                                    lineNumber: 181,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/auth-modal.tsx",
-                            lineNumber: 180,
+                            lineNumber: 179,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -558,7 +557,7 @@ function AuthModal({ mode, onClose }) {
                                     children: "학교"
                                 }, void 0, false, {
                                     fileName: "[project]/components/auth-modal.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 184,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -570,13 +569,13 @@ function AuthModal({ mode, onClose }) {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/components/auth-modal.tsx",
-                                    lineNumber: 186,
+                                    lineNumber: 185,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/auth-modal.tsx",
-                            lineNumber: 184,
+                            lineNumber: 183,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -587,7 +586,7 @@ function AuthModal({ mode, onClose }) {
                                     children: "학번"
                                 }, void 0, false, {
                                     fileName: "[project]/components/auth-modal.tsx",
-                                    lineNumber: 189,
+                                    lineNumber: 188,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -599,13 +598,13 @@ function AuthModal({ mode, onClose }) {
                                     required: true
                                 }, void 0, false, {
                                     fileName: "[project]/components/auth-modal.tsx",
-                                    lineNumber: 190,
+                                    lineNumber: 189,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/auth-modal.tsx",
-                            lineNumber: 188,
+                            lineNumber: 187,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -619,7 +618,7 @@ function AuthModal({ mode, onClose }) {
                                     children: "이전"
                                 }, void 0, false, {
                                     fileName: "[project]/components/auth-modal.tsx",
-                                    lineNumber: 194,
+                                    lineNumber: 193,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -629,19 +628,19 @@ function AuthModal({ mode, onClose }) {
                                     children: loading ? '가입 중...' : '회원가입 완료'
                                 }, void 0, false, {
                                     fileName: "[project]/components/auth-modal.tsx",
-                                    lineNumber: 202,
+                                    lineNumber: 201,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/auth-modal.tsx",
-                            lineNumber: 193,
+                            lineNumber: 192,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/auth-modal.tsx",
-                    lineNumber: 161,
+                    lineNumber: 160,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -657,13 +656,13 @@ function AuthModal({ mode, onClose }) {
                                 children: "회원가입"
                             }, void 0, false, {
                                 fileName: "[project]/components/auth-modal.tsx",
-                                lineNumber: 217,
+                                lineNumber: 216,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/auth-modal.tsx",
-                        lineNumber: 215,
+                        lineNumber: 214,
                         columnNumber: 13
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: "text-sm text-gray-600",
@@ -679,18 +678,18 @@ function AuthModal({ mode, onClose }) {
                                 children: "로그인"
                             }, void 0, false, {
                                 fileName: "[project]/components/auth-modal.tsx",
-                                lineNumber: 224,
+                                lineNumber: 223,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/auth-modal.tsx",
-                        lineNumber: 222,
+                        lineNumber: 221,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/auth-modal.tsx",
-                    lineNumber: 213,
+                    lineNumber: 212,
                     columnNumber: 9
                 }, this)
             ]
