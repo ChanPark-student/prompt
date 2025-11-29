@@ -1,12 +1,12 @@
 "use client"
 
-import React, { useState } from "react" // 1. React import
+import React, { useState, useEffect } from "react" // 1. React import, useEffect 추가
 import { useRouter } from "next/navigation" // ★★★ 1. useRouter import ★★★
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import AuthModal from "@/components/auth-modal"
 import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
-import { subjects } from "@/lib/subjects"
+// import { subjects } from "@/lib/subjects" // subjects는 API에서 가져오므로 주석 처리 또는 제거
 
 export default function UploadPage() {
   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
@@ -23,6 +23,30 @@ export default function UploadPage() {
   const [selectedSubject, setSelectedSubject] = useState(""); // Add this line
   const [showSuccess, setShowSuccess] = useState(false) // 5. 'alert' 대신 사용할 성공 메시지 상태
 
+  // ★★★ API에서 과목 목록을 가져오기 위한 새 State들 ★★★
+  const [subjectsData, setSubjectsData] = useState<Array<{ id: number; name: string }>>([])
+  const [loadingSubjects, setLoadingSubjects] = useState(true)
+
+  // 과목 목록을 API에서 가져오는 useEffect
+  useEffect(() => {
+    async function fetchSubjects() {
+      try {
+        const response = await fetch(`${API_URL}/subjects/`)
+        if (!response.ok) {
+          throw new Error("Failed to fetch subjects")
+        }
+        const data = await response.json()
+        setSubjectsData(data)
+      } catch (error) {
+        console.error("Error fetching subjects:", error)
+        // 에러 발생 시 처리 (예: 사용자에게 알림)
+      } finally {
+        setLoadingSubjects(false)
+      }
+    }
+    fetchSubjects()
+  }, [])
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -33,8 +57,8 @@ export default function UploadPage() {
     }
 
     try {
-      const selectedSubjectObject = subjects.find(
-        (sub) => sub.id === selectedSubject
+      const selectedSubjectObject = subjectsData.find(
+        (sub) => sub.id === Number(selectedSubject)
       );
       if (!selectedSubjectObject) {
         throw new Error("유효하지 않은 과목 선택");
@@ -138,9 +162,10 @@ export default function UploadPage() {
                   onChange={(e) => setSelectedSubject(e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9DB78C]"
                   required
+                  disabled={loadingSubjects || subjectsData.length === 0} // Disable while loading or if no subjects
                 >
-                  <option value="" disabled>과목을 선택하세요</option>
-                  {subjects.map((subject) => (
+                  <option value="" disabled>{loadingSubjects ? "과목 로딩 중..." : "과목을 선택하세요"}</option>
+                  {subjectsData.map((subject) => (
                     <option key={subject.id} value={subject.id}>
                       {subject.name}
                     </option>

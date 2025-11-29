@@ -6,7 +6,5 @@ export interface Category {
 }
 
 export const subjects: Category[] = [
-  { id: "1", name: "산업공학입문", path: "/prompts/1" },
-  { id: "2", name: "경제성공학", path: "/prompts/2" },
-  { id: "3", name: "확률통계", path: "/prompts/3" },
+  // These will be fetched from API later
 ];

@@ -73,3 +73,25 @@ class PromptFeedback(PromptFeedbackBase):
 
     class Config:
         from_attributes = True
+
+
+# Pydantic schema for School
+class SchoolBase(BaseModel):
+    name: str
+
+class School(SchoolBase):
+    id: int
+
+    class Config:
+        from_attributes = True
+
+
+# Pydantic schema for Subject
+class SubjectBase(BaseModel):
+    name: str
+
+class Subject(SubjectBase):
+    id: int
+
+    class Config:
+        from_attributes = True

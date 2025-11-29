@@ -8,26 +8,38 @@ import Footer from "@/components/footer"
 import AuthModal from "@/components/auth-modal"
 import { useAuth } from "@/lib/auth-context"
 
-// ★★★ 2. 검색을 위한 학교 목록 (간단한 버전) ★★★
-// (나중에는 이 목록을 DB나 API에서 가져와야 합니다)
-const allSchools = [
-  "전남대학교",
-  "전북대학교",
-  "서울대학교",
-  "서강대학교",
-  "서울여자대학교",
-  "고려대학교",
-  "연세대학교",
-  "한양대학교",
-  "성균관대학교",
-  "중앙대학교",
-]
+// ★★★ 2. 검색을 위한 학교 목록 (API에서 가져옴) ★★★
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"
 
 export default function Home() {
   const router = useRouter()
   const { user } = useAuth()
   const [authModal, setAuthModal] = useState<"login" | "signup" | null>(null)
   const isAuthenticated = !!user && !user.isAnonymous
+
+  // 새 State: API에서 가져온 학교 목록과 로딩 상태
+  const [schools, setSchools] = useState<string[]>([])
+  const [loading, setLoading] = useState(true)
+
+  // 학교 목록을 API에서 가져오는 useEffect
+  useEffect(() => {
+    async function fetchSchools() {
+      try {
+        const response = await fetch(`${API_URL}/schools/`)
+        if (!response.ok) {
+          throw new Error("Failed to fetch schools")
+        }
+        const data = await response.json()
+        setSchools(data.map((school: { name: string }) => school.name))
+      } catch (error) {
+        console.error("Error fetching schools:", error)
+        // 에러 발생 시 처리 (예: 사용자에게 알림)
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchSchools()
+  }, [])
 
   // ★★★ 3. 자동완성을 위한 새 State들 ★★★
   const [searchTerm, setSearchTerm] = useState("") // 현재 입력창의 텍스트
@@ -69,8 +81,8 @@ export default function Home() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
     setSearchTerm(value)
-    if (value.length > 0) {
-      const filtered = allSchools.filter(school =>
+    if (value.length > 0 && !loading) { // Only filter if not loading
+      const filtered = schools.filter(school =>
         school.toLowerCase().includes(value.toLowerCase())
       )
       setSuggestions(filtered)

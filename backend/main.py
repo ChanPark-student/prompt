@@ -6,8 +6,9 @@ from datetime import datetime, timedelta
 from typing import List, Optional
 
 from backend import database as models, schemas
-from backend.database import get_db, create_db_and_tables
+from backend.database import get_db, create_db_and_tables, School, Subject
 from backend.auth import get_password_hash, verify_password, create_access_token, verify_access_token, get_current_user_or_none
+from backend.schemas import School as SchemaSchool # Import School from schemas with an alias
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -37,14 +38,54 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
         raise credentials_exception
     return user
 
+def create_school_if_not_exists(db: Session, school_name: str):
+    school = db.query(School).filter(School.name == school_name).first()
+    if not school:
+        new_school = School(name=school_name)
+        db.add(new_school)
+        db.commit()
+        db.refresh(new_school)
+        print(f"--- School '{school_name}' added to database. ---")
+    else:
+        print(f"--- School '{school_name}' already exists in database. ---")
+
+def create_subject_if_not_exists(db: Session, subject_name: str):
+    subject = db.query(Subject).filter(Subject.name == subject_name).first()
+    if not subject:
+        new_subject = Subject(name=subject_name)
+        db.add(new_subject)
+        db.commit()
+        db.refresh(new_subject)
+        print(f"--- Subject '{subject_name}' added to database. ---")
+    else:
+        print(f"--- Subject '{subject_name}' already exists in database. ---")
+
 @app.on_event("startup")
 def on_startup():
     create_db_and_tables()
     print("Database tables created!")
+    db = next(get_db()) # Get a database session
+    create_school_if_not_exists(db, "전남대학교")
+    create_subject_if_not_exists(db, "산업공학입문")
+    create_subject_if_not_exists(db, "경제성공학")
+    create_subject_if_not_exists(db, "확률통계")
+    db.close() # Close the session
 
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
+
+
+@app.get("/schools/", response_model=List[schemas.School])
+def read_schools(db: Session = Depends(get_db)):
+    schools = db.query(models.School).all()
+    return schools
+
+
+@app.get("/subjects/", response_model=List[schemas.Subject])
+def read_subjects(db: Session = Depends(get_db)):
+    subjects = db.query(models.Subject).all()
+    return subjects
 
 @app.post("/signup", response_model=schemas.UserResponse, status_code=status.HTTP_201_CREATED)
 def signup(user: schemas.UserCreate, db: Session = Depends(get_db)):

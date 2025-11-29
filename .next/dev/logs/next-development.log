@@ -1,923 +1,183 @@
-[00:00:02.593] Server  LOG      ✓ Ready in 1706ms
-[00:00:13.945] Server  LOG      ○ Compiling /prompt-detail/[id] ...
-[00:00:17.237] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:17.533] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:17.533] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompt-detail/1","route":"/prompt-detail/[id]"}
-[00:00:17.533] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409187262}
-[00:00:31.014] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409200770}
-[00:02:42.346] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409332106}
-[00:02:50.371] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409340115}
-[00:13:08.434] Server  LOG      ✓ Compiled in 148ms
-[00:13:11.329] Browser ERROR   Failed to fetch prompt {}
-[00:13:22.214] Server  LOG      ✓ Compiled in 124ms
-[00:13:40.612] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409990372}
-[00:13:42.974] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409992730}
-[00:13:44.999] Browser ERROR   Error fetching user prompts: {}
-[00:13:44.999] Browser ERROR   Error fetching user prompts: {}
-[00:13:45.442] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409995200}
-[00:13:47.118] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409996868}
-[00:13:49.145] Browser ERROR   Error fetching user prompts: {}
-[00:13:49.145] Browser ERROR   Error fetching user prompts: {}
-[00:13:52.179] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410001934}
-[00:14:58.214] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410067963}
-[00:15:01.256] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410071019}
-[00:15:13.830] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410083589}
-[00:15:18.306] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410088060}
-[00:15:22.887] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:15:23.177] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:15:23.177] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompt-detail/1","route":"/prompt-detail/[id]"}
-[00:15:23.177] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410092940}
-[00:17:12.396] Server  LOG      ✓ Compiled in 167ms
-[00:17:12.514] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:39
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                       ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
+[00:00:03.197] Server  LOG      ✓ Ready in 2.1s
+[00:32:16.861] Server  LOG      ○ Compiling / ...
+[00:32:19.476] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:20.350] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:32:20.350] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:32:20.350] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764421921498}
+[00:40:25.735] Server  LOG      ✓ Compiled in 136ms
+[00:40:29.624] Server  LOG      ✓ Compiled in 238ms
+[00:40:30.355] Browser ERROR   ./app/page.tsx:84:48
+Parsing ecmascript source code failed
+  82 |     const value = e.target.value
+  83 |     setSearchTerm(value)
+> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
+     |                                                ^^^^^^
+  85 |       const filtered = schools.filter(school =>
+  86 |         school.toLowerCase().includes(value.toLowerCase())
+  87 |       )
 
-the name `authLoading` is defined multiple times
+Expected ';', '}' or <eof>
 
 Import traces:
   Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
 
   Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:12.514] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:48:9
-Ecmascript file had an error
-  46 |
-  47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-> 48 |   const isAuthenticated = !!user && !user.isAnonymous
-     |         ^^^^^^^^^^^^^^^
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-  51 |   const isAuthor = isAuthenticated && user && prompt && prompt.owner_id === user.id;
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:40:48.344] Browser ERROR   ./app/page.tsx:84:48
+Parsing ecmascript source code failed
+  82 |     const value = e.target.value
+  83 |     setSearchTerm(value)
+> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
+     |                                                ^^^^^^
+  85 |       const filtered = schools.filter(school =>
+  86 |         school.toLowerCase().includes(value.toLowerCase())
+  87 |       )
 
-the name `isAuthenticated` is defined multiple times
+Expected ';', '}' or <eof>
 
 Import traces:
   Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
 
   Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:12.514] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:52
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                                    ^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:41:08.343] Browser ERROR   ./app/page.tsx:84:48
+Parsing ecmascript source code failed
+  82 |     const value = e.target.value
+  83 |     setSearchTerm(value)
+> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
+     |                                                ^^^^^^
+  85 |       const filtered = schools.filter(school =>
+  86 |         school.toLowerCase().includes(value.toLowerCase())
+  87 |       )
 
-the name `token` is defined multiple times
+Expected ';', '}' or <eof>
 
 Import traces:
   Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
 
   Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:12.514] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:17
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                 ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:41:13.351] Browser ERROR   ./app/page.tsx:84:48
+Parsing ecmascript source code failed
+  82 |     const value = e.target.value
+  83 |     setSearchTerm(value)
+> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
+     |                                                ^^^^^^
+  85 |       const filtered = schools.filter(school =>
+  86 |         school.toLowerCase().includes(value.toLowerCase())
+  87 |       )
 
-the name `userProfile` is defined multiple times
+Expected ';', '}' or <eof>
 
 Import traces:
   Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
 
   Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:12.514] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:11
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |           ^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:41:18.348] Browser ERROR   ./app/page.tsx:84:48
+Parsing ecmascript source code failed
+  82 |     const value = e.target.value
+  83 |     setSearchTerm(value)
+> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
+     |                                                ^^^^^^
+  85 |       const filtered = schools.filter(school =>
+  86 |         school.toLowerCase().includes(value.toLowerCase())
+  87 |       )
 
-the name `user` is defined multiple times
+Expected ';', '}' or <eof>
 
 Import traces:
   Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
 
   Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:29.206] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:39
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                       ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:41:28.347] Browser ERROR   ./app/page.tsx:84:48
+Parsing ecmascript source code failed
+  82 |     const value = e.target.value
+  83 |     setSearchTerm(value)
+> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
+     |                                                ^^^^^^
+  85 |       const filtered = schools.filter(school =>
+  86 |         school.toLowerCase().includes(value.toLowerCase())
+  87 |       )
 
-the name `authLoading` is defined multiple times
+Expected ';', '}' or <eof>
 
 Import traces:
   Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
 
   Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:29.206] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:48:9
-Ecmascript file had an error
-  46 |
-  47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-> 48 |   const isAuthenticated = !!user && !user.isAnonymous
-     |         ^^^^^^^^^^^^^^^
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-  51 |   const isAuthor = isAuthenticated && user && prompt && prompt.owner_id === user.id;
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:41:37.347] Browser ERROR   ./app/page.tsx:84:48
+Parsing ecmascript source code failed
+  82 |     const value = e.target.value
+  83 |     setSearchTerm(value)
+> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
+     |                                                ^^^^^^
+  85 |       const filtered = schools.filter(school =>
+  86 |         school.toLowerCase().includes(value.toLowerCase())
+  87 |       )
 
-the name `isAuthenticated` is defined multiple times
+Expected ';', '}' or <eof>
 
 Import traces:
   Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
 
   Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:29.206] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:52
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                                    ^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:42:02.908] Browser ERROR   ./app/page.tsx:84:48
+Parsing ecmascript source code failed
+  82 |     const value = e.target.value
+  83 |     setSearchTerm(value)
+> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
+     |                                                ^^^^^^
+  85 |       const filtered = schools.filter(school =>
+  86 |         school.toLowerCase().includes(value.toLowerCase())
+  87 |       )
 
-the name `token` is defined multiple times
+Expected ';', '}' or <eof>
 
 Import traces:
   Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
 
   Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:29.206] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:17
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                 ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `userProfile` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:29.206] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:11
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |           ^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `user` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:30.237] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:39
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                       ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `authLoading` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:30.237] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:48:9
-Ecmascript file had an error
-  46 |
-  47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-> 48 |   const isAuthenticated = !!user && !user.isAnonymous
-     |         ^^^^^^^^^^^^^^^
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-  51 |   const isAuthor = isAuthenticated && user && prompt && prompt.owner_id === user.id;
-
-the name `isAuthenticated` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:30.237] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:52
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                                    ^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `token` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:30.237] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:17
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                 ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `userProfile` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:30.237] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:11
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |           ^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `user` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:30.417] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:39
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                       ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `authLoading` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:30.417] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:48:9
-Ecmascript file had an error
-  46 |
-  47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-> 48 |   const isAuthenticated = !!user && !user.isAnonymous
-     |         ^^^^^^^^^^^^^^^
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-  51 |   const isAuthor = isAuthenticated && user && prompt && prompt.owner_id === user.id;
-
-the name `isAuthenticated` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:30.417] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:52
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                                    ^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `token` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:30.417] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:17
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                 ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `userProfile` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:30.417] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:11
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |           ^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `user` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:31.593] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:39
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                       ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `authLoading` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:31.593] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:48:9
-Ecmascript file had an error
-  46 |
-  47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-> 48 |   const isAuthenticated = !!user && !user.isAnonymous
-     |         ^^^^^^^^^^^^^^^
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-  51 |   const isAuthor = isAuthenticated && user && prompt && prompt.owner_id === user.id;
-
-the name `isAuthenticated` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:31.593] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:52
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                                    ^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `token` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:31.593] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:17
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                 ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `userProfile` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:31.593] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:11
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |           ^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `user` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:32.084] Browser ERROR   uncaughtError: Error: ./app/prompt-detail/[id]/page.tsx:47:39
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                       ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `authLoading` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-
-[00:17:32.441] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:39
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                       ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `authLoading` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:32.442] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:48:9
-Ecmascript file had an error
-  46 |
-  47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-> 48 |   const isAuthenticated = !!user && !user.isAnonymous
-     |         ^^^^^^^^^^^^^^^
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-  51 |   const isAuthor = isAuthenticated && user && prompt && prompt.owner_id === user.id;
-
-the name `isAuthenticated` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:32.443] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:52
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                                    ^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `token` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:32.443] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:17
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                 ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `userProfile` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:32.443] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:11
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |           ^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `user` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:32.587] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:39
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                       ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `authLoading` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:32.587] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:48:9
-Ecmascript file had an error
-  46 |
-  47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-> 48 |   const isAuthenticated = !!user && !user.isAnonymous
-     |         ^^^^^^^^^^^^^^^
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-  51 |   const isAuthor = isAuthenticated && user && prompt && prompt.owner_id === user.id;
-
-the name `isAuthenticated` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:32.587] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:52
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                                    ^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `token` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:32.587] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:17
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                 ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `userProfile` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:32.587] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:11
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |           ^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `user` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:40.336] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:39
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                       ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `authLoading` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:40.336] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:48:9
-Ecmascript file had an error
-  46 |
-  47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-> 48 |   const isAuthenticated = !!user && !user.isAnonymous
-     |         ^^^^^^^^^^^^^^^
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-  51 |   const isAuthor = isAuthenticated && user && prompt && prompt.owner_id === user.id;
-
-the name `isAuthenticated` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:40.336] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:52
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                                                    ^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `token` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:40.336] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:17
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |                 ^^^^^^^^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `userProfile` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:17:40.336] Browser ERROR   ./app/prompt-detail/[id]/page.tsx:47:11
-Ecmascript file had an error
-  45 |
-  46 |
-> 47 |   const { user, userProfile, loading: authLoading, token } = useAuth()
-     |           ^^^^
-  48 |   const isAuthenticated = !!user && !user.isAnonymous
-  49 |
-  50 |   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-
-the name `user` is defined multiple times
-
-Import traces:
-  Client Component Browser:
-    ./app/prompt-detail/[id]/page.tsx [Client Component Browser]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/prompt-detail/[id]/page.tsx [Client Component SSR]
-    ./app/prompt-detail/[id]/page.tsx [Server Component]
-[00:18:22.366] Server  LOG      ✓ Compiled in 116ms
-[00:18:22.947] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:18:23.333] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:18:23.333] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:18:23.334] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410272982}
-[00:18:38.852] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:18:39.150] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:18:39.150] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:18:39.150] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410288912}
-[00:18:44.245] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410294007}
-[00:18:45.936] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410295698}
-[00:18:49.859] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410299621}
-[00:18:51.078] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410300832}
-[00:18:52.627] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410302387}
-[00:18:56.561] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410306323}
-[00:19:34.703] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410344464}
-[00:19:37.993] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410347748}
-[00:19:39.778] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410349528}
-[00:19:43.466] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410353212}
-[00:19:44.668] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410354429}
-[00:19:47.005] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410356765}
-[00:19:48.913] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764410358671}
-[00:28:08.717] Server  LOG      ✓ Compiled in 121ms
-[00:28:29.988] Server  LOG      ✓ Compiled in 126ms
-[00:34:34.332] Browser ERROR   Failed to fetch prompt {}
-[00:35:43.896] Server  LOG      ✓ Compiled in 125ms
-[00:35:44.341] Browser ERROR   The final argument passed to %s changed size between renders. The order and size of this array must remain constant.
-
-Previous: %s
-Incoming: %s useEffect [1] [1, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJcdWM3NzRcdWMyYjlcdWM1ZjQiLCJleHAiOjE3NjQ0MTIxMzV9.oa79VztpbPRjXEu84FJSzGhngD1S4o7XvZo-vucN_N0]
-[00:36:02.872] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:36:03.164] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:36:03.164] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompt-detail/1","route":"/prompt-detail/[id]"}
-[00:36:03.164] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411332922}
-[00:37:28.076] Server  LOG      ✓ Compiled in 134ms
-[00:37:50.171] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:37:50.458] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:37:50.458] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompt-detail/1","route":"/prompt-detail/[id]"}
-[00:37:50.458] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411440224}
-[00:39:39.665] Server  LOG      ✓ Compiled in 124ms
-[00:40:06.024] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411575781}
-[00:40:13.039] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411582799}
-[00:40:14.532] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411584293}
-[00:40:17.175] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411586936}
-[00:40:38.757] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411608514}
-[00:40:39.816] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411609559}
-[00:40:39.816] Browser ERROR   Error fetching prompts by subject: {}
-[00:40:39.816] Browser ERROR   Error fetching prompts by subject: {}
-[00:42:48.170] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411737930}
-[00:42:54.075] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411743837}
-[00:42:58.744] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411748499}
-[00:42:59.857] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411749610}
-[00:43:01.671] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411751428}
-[00:43:06.705] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:43:06.994] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:43:06.994] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompt-detail/1","route":"/prompt-detail/[id]"}
-[00:43:06.994] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411756752}
-[00:43:28.253] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411778010}
-[00:44:57.782] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411867544}
-[00:44:59.175] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411868934}
-[00:45:00.501] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411870259}
-[00:46:32.351] Server  LOG      ✓ Compiled in 153ms
-[00:46:32.507] Browser ERROR   uncaughtError: ReferenceError: isBlurred is not defined
-[00:47:08.156] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:47:08.176] Server  LOG      ✓ Compiled in 120ms
-[00:47:08.895] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411998057}
-[00:47:09.506] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:47:09.771] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:47:09.771] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompt-detail/1","route":"/prompt-detail/[id]"}
-[00:47:09.771] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764411999528}
-[00:47:54.984] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764412044739}
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[00:42:27.283] Server  LOG      ✓ Compiled in 145ms
+[00:43:16.038] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422577781}
+[00:43:19.051] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422580802}
+[00:43:22.197] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422583945}
+[00:43:25.286] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422587034}
+[00:43:54.073] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422615821}
+[00:43:56.614] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422618352}
+[00:43:57.875] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422619613}
+[00:44:03.800] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422625548}
+[00:44:08.219] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422629968}
+[00:44:09.776] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422631526}
+[00:44:13.312] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422635048}
+[00:44:19.962] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422641700}
+[00:44:20.664] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422642399}
+[00:44:22.327] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422644076}

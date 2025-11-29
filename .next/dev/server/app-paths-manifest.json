@@ -1,8 +1,6 @@
 {
-  "/my-page/page": "app/my-page/page.js",
   "/page": "app/page.js",
   "/prompt-detail/[id]/page": "app/prompt-detail/[id]/page.js",
   "/prompts/[id]/page": "app/prompts/[id]/page.js",
-  "/search/page": "app/search/page.js",
-  "/upload/page": "app/upload/page.js"
+  "/search/page": "app/search/page.js"
 }

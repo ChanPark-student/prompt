@@ -79,6 +79,22 @@ class User(Base):
     feedback = relationship("PromptFeedback", back_populates="user")
 
 
+# Define the School model
+class School(Base):
+    __tablename__ = "schools"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, unique=True, index=True, nullable=False)
+
+
+# Define the Subject model
+class Subject(Base):
+    __tablename__ = "subjects"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, unique=True, index=True, nullable=False)
+
+
 # Function to get a database session
 def get_db():
     db = SessionLocal()
