@@ -16,7 +16,7 @@ app = FastAPI()
 # CORS Middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -95,6 +95,14 @@ async def login_for_access_token(login_data: schemas.UserLogin, db: Session = De
 async def read_users_me(current_user: models.User = Depends(get_current_user)):
     return current_user
 
+@app.get("/users/me/prompts", response_model=List[schemas.Prompt])
+def read_user_prompts(
+    db: Session = Depends(get_db),
+    current_user: models.User = Depends(get_current_user)
+):
+    user_prompts = db.query(models.Prompt).filter(models.Prompt.owner_id == current_user.id).all()
+    return user_prompts
+
 @app.post("/prompts/", response_model=schemas.Prompt)
 def create_prompt(
     prompt: schemas.PromptCreate,
@@ -107,7 +115,32 @@ def create_prompt(
     db.refresh(db_prompt)
     return db_prompt
 
+# Temporary map to resolve subject_id to name, mirroring lib/subjects.ts
+subjects_map = {
+    "1": "산업공학입문",
+    "2": "경제성공학",
+    "3": "확률통계",
+}
+
 @app.get("/prompts/", response_model=List[schemas.Prompt])
-def read_prompts(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    prompts = db.query(models.Prompt).offset(skip).limit(limit).all()
+def read_prompts(
+    skip: int = 0,
+    limit: int = 100,
+    subject_id: str | None = None,
+    db: Session = Depends(get_db)
+):
+    query = db.query(models.Prompt)
+
+    if subject_id and subject_id in subjects_map:
+        subject_name = subjects_map[subject_id]
+        query = query.filter(models.Prompt.subject == subject_name)
+    
+    prompts = query.offset(skip).limit(limit).all()
     return prompts
+
+@app.get("/prompts/{prompt_id}", response_model=schemas.Prompt)
+def read_prompt(prompt_id: int, db: Session = Depends(get_db)):
+    db_prompt = db.query(models.Prompt).filter(models.Prompt.id == prompt_id).first()
+    if db_prompt is None:
+        raise HTTPException(status_code=404, detail="Prompt not found")
+    return db_prompt

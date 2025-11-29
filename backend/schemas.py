@@ -15,6 +15,7 @@ class Prompt(PromptBase):
     id: int
     owner_id: int
     created_at: datetime
+    author: str
 
     class Config:
         from_attributes = True
@@ -46,7 +47,6 @@ class UserResponse(BaseModel):
     age: Optional[str]
     school: Optional[str]
     studentId: Optional[str]
-    prompts: List[Prompt] = []
 
     class Config:
         from_attributes = True

@@ -1,35 +1,59 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import AuthModal from "@/components/auth-modal"
 import Sidebar from "@/components/sidebar"
-import { useAuth } from "@/lib/auth-context"
-import { mockPrompts, Prompt } from "@/lib/mock-data" 
+import { useAuth, API_URL } from "@/lib/auth-context"
+import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+
 
 export default function MyPage() {
   const [authModal, setAuthModal] = useState<"login" | "signup" | null>(null)
-  const { user, userProfile, loading } = useAuth()
+  const { user, userProfile, loading, token } = useAuth()
   const isAuthenticated = !!user && !user.isAnonymous
 
-  let totalLikes = 0; // ★★★ 1. 총 추천수 합계를 저장할 변수 ★★★
-  const userPrompts: Prompt[] = []
+  const [userPrompts, setUserPrompts] = useState<Prompt[]>([]);
+  const [loadingPrompts, setLoadingPrompts] = useState(true);
 
-  if (isAuthenticated && userProfile) {
-    for (const key in mockPrompts) {
-      const userUploads = mockPrompts[key].filter(
-        prompt => prompt.author === userProfile.name
-      );
-      userPrompts.push(...userUploads);
-    }
-    
-    // ★★★ 2. userPrompts의 총 추천수(likes - dislikes)를 계산합니다. ★★★
-    totalLikes = userPrompts.reduce((sum, prompt) => sum + (prompt.likes - prompt.dislikes), 0);
-  }
+  useEffect(() => {
+    const fetchUserPrompts = async () => {
+      if (!isAuthenticated || !token) {
+        setUserPrompts([]);
+        setLoadingPrompts(false);
+        return;
+      }
 
-  if (loading) {
+      setLoadingPrompts(true);
+      try {
+        const response = await fetch(`${API_URL}/users/me/prompts`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch user prompts.");
+        }
+
+        const data: Prompt[] = await response.json();
+        setUserPrompts(data);
+      } catch (error) {
+        console.error("Error fetching user prompts:", error);
+        setUserPrompts([]);
+      } finally {
+        setLoadingPrompts(false);
+      }
+    };
+
+    fetchUserPrompts();
+  }, [isAuthenticated, token]);
+
+  const totalLikes = userPrompts.reduce((sum, prompt) => sum + ((prompt.likes || 0) - (prompt.dislikes || 0)), 0);
+  
+  if (loading || loadingPrompts) {
     return (
       <div className="flex justify-center items-center min-h-screen">
         Loading...

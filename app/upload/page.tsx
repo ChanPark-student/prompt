@@ -5,15 +5,15 @@ import { useRouter } from "next/navigation" // ★★★ 1. useRouter import ★
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import AuthModal from "@/components/auth-modal"
-import { useAuth } from "@/lib/auth-context" // 2. '전역 관리자' import
-import { Category, subjects } from "@/lib/subjects"
+import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+import { subjects } from "@/lib/subjects"
 
 export default function UploadPage() {
   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
   const [authModal, setAuthModal] = useState<"login" | "signup" | null>(null)
   
   // 3. '전역 관리자'로부터 실제 로그인 정보 가져오기
-  const { user, loading } = useAuth()
+  const { user, token, loading } = useAuth()
   
   // 4. 'useState(false)'를 삭제하고, 실제 user 정보로 로그인 상태 결정
   const isAuthenticated = !!user && !user.isAnonymous
@@ -23,20 +23,59 @@ export default function UploadPage() {
   const [selectedSubject, setSelectedSubject] = useState(""); // Add this line
   const [showSuccess, setShowSuccess] = useState(false) // 5. 'alert' 대신 사용할 성공 메시지 상태
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // TODO: 여기에 실제 업로드 로직(예: API 호출)을 추가합니다.
-    console.log("Uploading:", { title, content, selectedSubject })
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-    // 6. 'alert' 대신 성공 메시지 표시
-    setShowSuccess(true)
-    setTitle("")
-    setContent("")
-    // 3초 후에 메시지 숨기기
-    setTimeout(() => {
-      setShowSuccess(false)
-    }, 3000)
-  }
+    if (!isAuthenticated || !token) {
+      alert("로그인 후 프롬프트를 업로드할 수 있습니다.");
+      setAuthModal("login");
+      return;
+    }
+
+    try {
+      const selectedSubjectObject = subjects.find(
+        (sub) => sub.id === selectedSubject
+      );
+      if (!selectedSubjectObject) {
+        throw new Error("유효하지 않은 과목 선택");
+      }
+
+      const response = await fetch(`${API_URL}/prompts/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          title,
+          content,
+          subject: selectedSubjectObject.name,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || "프롬프트 업로드 실패");
+      }
+
+      // 6. 'alert' 대신 성공 메시지 표시
+      setShowSuccess(true);
+      setTitle("");
+      setContent("");
+      setSelectedSubject(""); // Clear selected subject
+      
+      // Optionally redirect to My Page or a success page
+      router.push('/my-page'); // Assuming a /my-page route exists to view user's prompts
+
+      // 3초 후에 메시지 숨기기
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 3000);
+    } catch (error: any) {
+      console.error("프롬프트 업로드 오류:", error);
+      alert(error.message); // Show error to the user
+    }
+  };
 
   // 7. 로딩 중일 때 빈 화면 대신 로딩 표시
   if (loading) {

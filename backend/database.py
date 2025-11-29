@@ -19,6 +19,8 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 # Define the Prompt model
+from sqlalchemy.ext.hybrid import hybrid_property
+
 class Prompt(Base):
     __tablename__ = "prompts"
 
@@ -30,6 +32,11 @@ class Prompt(Base):
     owner_id = Column(Integer, ForeignKey("users.id"))
 
     owner = relationship("User", back_populates="prompts")
+
+    @hybrid_property
+    def author(self):
+        return self.owner.name
+
 
 # Define the User model
 class User(Base):

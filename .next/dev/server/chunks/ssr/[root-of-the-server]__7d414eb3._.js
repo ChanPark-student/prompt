@@ -27,6 +27,8 @@ module.exports = mod;
 "use strict";
 
 __turbopack_context__.s([
+    "API_URL",
+    ()=>API_URL,
     "AuthProvider",
     ()=>AuthProvider,
     "useAuth",

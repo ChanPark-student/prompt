@@ -710,7 +710,7 @@ function UploadPage() {
     ;
     const [authModal, setAuthModal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     // 3. '전역 관리자'로부터 실제 로그인 정보 가져오기
-    const { user, loading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
+    const { user, token, loading } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useAuth"])();
     // 4. 'useState(false)'를 삭제하고, 실제 user 정보로 로그인 상태 결정
     const isAuthenticated = !!user && !user.isAnonymous;
     const [title, setTitle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
@@ -718,21 +718,45 @@ function UploadPage() {
     const [selectedSubject, setSelectedSubject] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(""); // Add this line
     const [showSuccess, setShowSuccess] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false) // 5. 'alert' 대신 사용할 성공 메시지 상태
     ;
-    const handleSubmit = (e)=>{
+    const handleSubmit = async (e)=>{
         e.preventDefault();
-        // TODO: 여기에 실제 업로드 로직(예: API 호출)을 추가합니다.
-        console.log("Uploading:", {
-            title,
-            content
-        });
-        // 6. 'alert' 대신 성공 메시지 표시
-        setShowSuccess(true);
-        setTitle("");
-        setContent("");
-        // 3초 후에 메시지 숨기기
-        setTimeout(()=>{
-            setShowSuccess(false);
-        }, 3000);
+        if (!isAuthenticated || !token) {
+            alert("로그인 후 프롬프트를 업로드할 수 있습니다.");
+            setAuthModal("login");
+            return;
+        }
+        try {
+            const response = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$context$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["API_URL"]}/prompts/`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    title,
+                    content,
+                    subject_id: selectedSubject
+                })
+            });
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.detail || "프롬프트 업로드 실패");
+            }
+            // 6. 'alert' 대신 성공 메시지 표시
+            setShowSuccess(true);
+            setTitle("");
+            setContent("");
+            setSelectedSubject(""); // Clear selected subject
+            // Optionally redirect to My Page or a success page
+            router.push('/my-page'); // Assuming a /my-page route exists to view user's prompts
+            // 3초 후에 메시지 숨기기
+            setTimeout(()=>{
+                setShowSuccess(false);
+            }, 3000);
+        } catch (error) {
+            console.error("프롬프트 업로드 오류:", error);
+            alert(error.message); // Show error to the user
+        }
     };
     // 7. 로딩 중일 때 빈 화면 대신 로딩 표시
     if (loading) {
@@ -741,7 +765,7 @@ function UploadPage() {
             children: "Loading..."
         }, void 0, false, {
             fileName: "[project]/app/upload/page.tsx",
-            lineNumber: 44,
+            lineNumber: 75,
             columnNumber: 7
         }, this);
     }
@@ -752,7 +776,7 @@ function UploadPage() {
                 onSignup: ()=>setAuthModal("signup")
             }, void 0, false, {
                 fileName: "[project]/app/upload/page.tsx",
-                lineNumber: 52,
+                lineNumber: 83,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -776,19 +800,19 @@ function UploadPage() {
                                         d: "M15 19l-7-7 7-7"
                                     }, void 0, false, {
                                         fileName: "[project]/app/upload/page.tsx",
-                                        lineNumber: 66,
+                                        lineNumber: 97,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/upload/page.tsx",
-                                    lineNumber: 65,
+                                    lineNumber: 96,
                                     columnNumber: 13
                                 }, this),
                                 "뒤로가기"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/upload/page.tsx",
-                            lineNumber: 61,
+                            lineNumber: 92,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -796,7 +820,7 @@ function UploadPage() {
                             children: "프롬프트 업로드"
                         }, void 0, false, {
                             fileName: "[project]/app/upload/page.tsx",
-                            lineNumber: 71,
+                            lineNumber: 102,
                             columnNumber: 11
                         }, this),
                         isAuthenticated ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -808,7 +832,7 @@ function UploadPage() {
                                     children: "프롬프트가 업로드되었습니다!"
                                 }, void 0, false, {
                                     fileName: "[project]/app/upload/page.tsx",
-                                    lineNumber: 77,
+                                    lineNumber: 108,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -818,7 +842,7 @@ function UploadPage() {
                                             children: "제목"
                                         }, void 0, false, {
                                             fileName: "[project]/app/upload/page.tsx",
-                                            lineNumber: 83,
+                                            lineNumber: 114,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -830,13 +854,60 @@ function UploadPage() {
                                             required: true
                                         }, void 0, false, {
                                             fileName: "[project]/app/upload/page.tsx",
-                                            lineNumber: 84,
+                                            lineNumber: 115,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/upload/page.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 113,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                            htmlFor: "subject-select",
+                                            className: "block text-sm font-medium text-gray-700 mb-2",
+                                            children: "과목"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/upload/page.tsx",
+                                            lineNumber: 126,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                                            id: "subject-select",
+                                            value: selectedSubject,
+                                            onChange: (e)=>setSelectedSubject(e.target.value),
+                                            className: "w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9DB78C]",
+                                            required: true,
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                    value: "",
+                                                    disabled: true,
+                                                    children: "과목을 선택하세요"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/upload/page.tsx",
+                                                    lineNumber: 134,
+                                                    columnNumber: 19
+                                                }, this),
+                                                subjects.map((subject)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                        value: subject.id,
+                                                        children: subject.name
+                                                    }, subject.id, false, {
+                                                        fileName: "[project]/app/upload/page.tsx",
+                                                        lineNumber: 136,
+                                                        columnNumber: 21
+                                                    }, this))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/upload/page.tsx",
+                                            lineNumber: 127,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/upload/page.tsx",
+                                    lineNumber: 125,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -846,7 +917,7 @@ function UploadPage() {
                                             children: "내용"
                                         }, void 0, false, {
                                             fileName: "[project]/app/upload/page.tsx",
-                                            lineNumber: 95,
+                                            lineNumber: 144,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -858,13 +929,13 @@ function UploadPage() {
                                             required: true
                                         }, void 0, false, {
                                             fileName: "[project]/app/upload/page.tsx",
-                                            lineNumber: 96,
+                                            lineNumber: 145,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/upload/page.tsx",
-                                    lineNumber: 94,
+                                    lineNumber: 143,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -873,13 +944,13 @@ function UploadPage() {
                                     children: "업로드"
                                 }, void 0, false, {
                                     fileName: "[project]/app/upload/page.tsx",
-                                    lineNumber: 106,
+                                    lineNumber: 155,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/upload/page.tsx",
-                            lineNumber: 74,
+                            lineNumber: 105,
                             columnNumber: 13
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "text-center py-12",
@@ -889,7 +960,7 @@ function UploadPage() {
                                     children: "로그인 후 프롬프트를 업로드할 수 있습니다."
                                 }, void 0, false, {
                                     fileName: "[project]/app/upload/page.tsx",
-                                    lineNumber: 115,
+                                    lineNumber: 164,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -898,24 +969,24 @@ function UploadPage() {
                                     children: "로그인"
                                 }, void 0, false, {
                                     fileName: "[project]/app/upload/page.tsx",
-                                    lineNumber: 116,
+                                    lineNumber: 165,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/upload/page.tsx",
-                            lineNumber: 114,
+                            lineNumber: 163,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/upload/page.tsx",
-                    lineNumber: 58,
+                    lineNumber: 89,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/upload/page.tsx",
-                lineNumber: 57,
+                lineNumber: 88,
                 columnNumber: 7
             }, this),
             authModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$auth$2d$modal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -923,12 +994,12 @@ function UploadPage() {
                 onClose: ()=>setAuthModal(null)
             }, void 0, false, {
                 fileName: "[project]/app/upload/page.tsx",
-                lineNumber: 128,
+                lineNumber: 177,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/upload/page.tsx",
-                lineNumber: 134,
+                lineNumber: 183,
                 columnNumber: 7
             }, this)
         ]

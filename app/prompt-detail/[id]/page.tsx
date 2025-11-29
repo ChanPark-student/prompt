@@ -1,34 +1,63 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from "next/link"
 import { useRouter } from "next/navigation" 
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import AuthModal from "@/components/auth-modal"
-import { useAuth } from "@/lib/auth-context"
-import { mockPrompts, findPromptById, Prompt } from "@/lib/mock-data"
+import { useAuth, API_URL } from "@/lib/auth-context"
+import { Prompt } from "@/lib/mock-data"; // Keep for type, can be defined locally later
 
 export default function PromptDetailPage({ params }: { params: { id: string } }) {
   const router = useRouter() 
   const [authModal, setAuthModal] = useState<"login" | "signup" | null>(null)
   
-  // 1. 'userProfile'도 context에서 가져옵니다 (본인 글 확인용)
-  const { user, userProfile, loading } = useAuth()
+  const { user, userProfile, loading: authLoading } = useAuth()
   const isAuthenticated = !!user && !user.isAnonymous
 
-  const resolvedParams = React.use(params)
-  const prompt = findPromptById(resolvedParams.id)
+  const [prompt, setPrompt] = useState<Prompt | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  const resolvedParams = React.use(params);
+
+  useEffect(() => {
+    const fetchPrompt = async () => {
+      if (!resolvedParams.id) return;
+      setLoading(true);
+      try {
+        const response = await fetch(`${API_URL}/prompts/${resolvedParams.id}`);
+        if (!response.ok) {
+          throw new Error("Prompt not found");
+        }
+        const data = await response.json();
+        setPrompt(data);
+      } catch (error) {
+        console.error("Failed to fetch prompt", error);
+        setPrompt(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPrompt();
+  }, [resolvedParams.id]);
+
 
   // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
   const isAuthor = isAuthenticated && userProfile && prompt && prompt.author === userProfile.name;
-
+  
   // 3. 'isAuthor'가 true이면, 'isBlurred'는 처음부터 false가 됩니다.
   const [isBlurred, setIsBlurred] = useState(!isAuthor)
   const [showFeedback, setShowFeedback] = useState(false)
   const [feedback, setFeedback] = useState<'like' | 'dislike' | null>(null)
 
-  if (loading) {
+  useEffect(() => {
+    // Update isBlurred when isAuthor changes (after prompt has been fetched)
+    setIsBlurred(!isAuthor);
+  }, [isAuthor]);
+
+  if (loading || authLoading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
         Loading...
@@ -89,14 +118,13 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
 
         <main className="flex-1 p-6 md:p-8">
           <div className="max-w-4xl mx-auto">
-            <div className="mb-8">
-              <h1 className="text-3xl font-bold mb-4">{prompt.title}</h1>
-              <p className="text-gray-600 mb-2">작성자: {prompt.author} | {prompt.date}</p>
-              <p className="text-gray-600">
-                {prompt.school} {">"} {prompt.subject}
-              </p>
-            </div>
-
+                          <div className="mb-8">
+                            <h1 className="text-3xl font-bold mb-4">{prompt.title}</h1>
+                            <p className="text-gray-600 mb-2">작성자: {prompt.author} | {prompt.date}</p>
+                            <p className="text-gray-600">
+                              {prompt.school} {">"} {prompt.subject} | 조회수 {prompt.views || 0} | 추천수 {(prompt.likes || 0) - (prompt.dislikes || 0)}
+                            </p>
+                          </div>
             <div className="relative mb-6">
               <div 
                 className={`p-6 bg-white rounded-lg border border-gray-200 min-h-[200px] transition-all duration-300 ${isBlurred ? 'blur-md' : 'blur-none'}`}

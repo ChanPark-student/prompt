@@ -1,86 +1,2271 @@
-[00:00:06.627] Server  LOG      ✓ Ready in 4.4s
-[00:01:03.195] Server  LOG      ○ Compiling / ...
-[00:01:11.985] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:12.385] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:01:12.385] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:01:12.385] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763987527936}
-[00:09:35.349] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988030902}
-[00:09:39.536] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988035088}
-[00:09:54.360] Browser LOG     Uploading: {"content":"안녕하세여","title":"1등하는 방법"}
-[00:09:58.395] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988053940}
-[00:10:00.709] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:01.053] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:10:01.053] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/my-page","route":"/my-page"}
-[00:10:01.053] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988056613}
-[00:10:04.026] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988059578}
-[00:10:09.346] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988064902}
-[00:10:15.223] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:15.417] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:10:15.417] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
-[00:10:15.418] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988070977}
-[00:10:21.314] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/3 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/3","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988076864}
-[00:10:28.529] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:28.754] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:10:28.754] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/1"}
-[00:10:28.754] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/1","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988084314}
-[00:10:30.551] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:30.795] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:10:30.795] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/search","route":"/search"}
-[00:10:30.795] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988086353}
-[00:10:32.632] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:32.923] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:10:32.923] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
-[00:10:32.923] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988088476}
-[00:10:34.204] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988089749}
-[00:14:00.542] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988296096}
-[00:14:01.288] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988296842}
-[00:14:05.569] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988301119}
-[00:14:06.582] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988302139}
-[00:14:11.816] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988307362}
-[00:14:12.823] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988308378}
-[00:14:13.545] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988309101}
-[00:14:14.206] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988309762}
-[00:14:14.905] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988310461}
-[00:14:15.430] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988310984}
-[00:14:16.982] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988312536}
-[00:14:17.600] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988313158}
-[00:16:03.952] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988419510}
-[00:16:08.765] Browser LOG     Uploading: {"content":"asdasd","title":"asdsaasdasd"}
-[00:16:10.818] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988426374}
-[00:16:17.632] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988433188}
-[00:16:19.417] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:19.826] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:16:19.826] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/2","route":"/prompts/[id]"}
-[00:16:19.826] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/2 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/2","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988435385}
-[00:16:21.774] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988437328}
-[00:16:27.238] Browser LOG     Uploading: {"content":"ㅁㄴㅇㅁㄴㅇ","title":"ㅁㄴㅇㅁㄴㅇㅁ"}
-[00:16:31.105] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/2 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/2","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988446663}
-[00:16:32.765] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:32.984] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:16:32.984] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/2","route":"/prompts/[id]"}
-[00:16:32.984] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/2 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/2","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988448532}
-[00:17:01.059] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/4 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/4","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988476614}
-[00:17:03.128] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/2 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/2","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988478682}
-[00:17:11.954] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988487500}
-[00:17:15.307] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/2 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/2","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988490864}
-[00:17:17.278] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988492822}
-[00:17:20.001] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988495542}
-[00:17:22.656] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988498214}
-[00:17:27.344] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988502891}
-[00:17:31.019] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988506575}
-[00:17:41.675] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/2 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/2","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988517232}
-[00:17:45.961] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988521519}
-[00:17:47.646] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988523189}
-[00:17:58.376] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988533924}
-[00:18:59.385] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763988594939}
-[00:26:08.067] Server  LOG      ✓ Compiled in 593ms
-[00:27:07.106] Server  LOG      ✓ Compiled in 371ms
-[00:27:34.248] Server  LOG      ✓ Compiled in 284ms
-[00:28:28.818] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763989164370}
-[00:28:32.169] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763989167722}
-[00:28:33.770] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763989169326}
-[00:28:58.345] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763989193900}
-[00:29:00.621] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:29:01.043] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:29:01.043] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
-[00:29:01.043] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1763989196591}
+[00:00:18.521] Server  LOG      ✓ Ready in 8.6s
+[00:00:55.770] Server  LOG      ○ Compiling / ...
+[00:01:01.602] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:03.405] Browser ERROR   {}
+[00:01:03.405] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:01:03.405] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:01:03.405] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764405295887}
+[00:01:28.406] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764405320430}
+[00:01:54.479] Browser LOG     Uploading: {"content":"히히 똥","selectedSubject":"1","title":"1등급 받는 비법"}
+[00:01:57.399] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764405350084}
+[00:02:00.008] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764405352704}
+[00:02:05.026] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764405357726}
+[00:02:08.429] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:08.571] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:02:08.571] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:02:08.571] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764405361269}
+[00:08:24.103] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764405736798}
+[00:09:14.303] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764405786999}
+[00:09:24.654] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764405797339}
+[00:09:26.410] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:26.634] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:09:26.634] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:09:26.634] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764405799335}
+[00:11:51.407] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:11:51.407] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:11.399] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:11.399] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:12.405] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:12.405] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:23.395] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:23.396] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:33.406] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:33.406] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:33.406] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:12:33.406] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:12:43.397] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:43.397] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:43.397] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:12:43.397] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:12:44.410] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:44.410] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:44.410] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:12:44.410] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:12:57.511] Server  LOG      ✓ Compiled in 138ms
+[00:12:58.407] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:58.407] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:12:58.407] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:12:58.407] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:07.309] Server  LOG      ✓ Compiled in 183ms
+[00:13:08.410] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:08.410] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:08.410] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:08.410] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:08.410] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:08.410] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:34.579] Server  ERROR    ⨯ ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+
+
+./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+
+[00:13:34.748] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:34.748] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:34.748] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:34.748] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:34.748] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:34.748] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:35.605] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:35.605] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:35.605] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:35.605] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:35.605] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:35.605] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:35.711] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:35.711] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:35.711] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:35.711] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:35.711] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:35.711] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:36.573] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:36.573] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:36.573] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:36.573] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:36.573] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:36.573] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:36.814] Browser ERROR   uncaughtError: Error: ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+
+
+[00:13:37.038] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:37.038] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:37.038] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:37.038] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:37.038] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:37.038] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:37.038] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:37.038] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:37.038] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:37.038] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:37.038] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:37.038] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:44.529] Browser ERROR   uncaughtError: Error: ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+
+
+[00:13:44.705] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:44.705] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:44.705] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:44.705] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:44.705] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:44.705] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:44.705] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:44.705] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:13:44.705] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:44.705] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:13:44.705] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:13:44.705] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:14:00.344] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:14:00.344] Browser ERROR   ./app/upload/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context" // 2. '전역 관리자' import
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 |
+  10 | export default function UploadPage() {
+  11 |   const router = useRouter() // ★★★ 2. useRouter 훅 선언 ★★★
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/upload/page.tsx [Client Component Browser]
+    ./app/upload/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/upload/page.tsx [Client Component SSR]
+    ./app/upload/page.tsx [Server Component]
+[00:14:00.344] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:14:00.344] Browser ERROR   ./app/my-page/page.tsx:9:1
+Export API_URL doesn't exist in target module
+   7 | import AuthModal from "@/components/auth-modal"
+   8 | import Sidebar from "@/components/sidebar"
+>  9 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might need to define a new one or adjust this one.
+  11 |
+  12 |
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/my-page/page.tsx [Client Component Browser]
+    ./app/my-page/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/my-page/page.tsx [Client Component SSR]
+    ./app/my-page/page.tsx [Server Component]
+[00:14:00.344] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-client] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:14:00.344] Browser ERROR   ./app/prompts/[id]/page.tsx:8:1
+Export API_URL doesn't exist in target module
+   6 | import Footer from "@/components/footer"
+   7 | import AuthModal from "@/components/auth-modal"
+>  8 | import { useAuth, API_URL } from "@/lib/auth-context"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Prompt } from "@/lib/mock-data" 
+  10 |
+  11 | export default function PromptsPage({ params }: { params: { id: string } }) {
+
+The export API_URL was not found in module [project]/lib/auth-context.tsx [app-ssr] (ecmascript).
+Did you mean to import AuthProvider?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/prompts/[id]/page.tsx [Client Component Browser]
+    ./app/prompts/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/prompts/[id]/page.tsx [Client Component SSR]
+    ./app/prompts/[id]/page.tsx [Server Component]
+[00:14:41.389] Server  LOG      ✓ Compiled in 122ms
+[00:14:42.178] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:42.406] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:42.407] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:14:42.407] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406115070}
+[00:15:09.293] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406141983}
+[00:15:11.703] Browser ERROR   uncaughtError: ReferenceError: subjects is not defined
+[00:16:13.267] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:16:13.283] Server  LOG      ✓ Compiled in 148ms
+[00:16:14.065] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:14.208] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:16:14.209] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/upload","route":"/upload"}
+[00:16:14.209] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406206898}
+[00:16:23.381] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406216078}
+[00:16:24.729] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406217414}
+[00:17:07.445] Browser ERROR   프롬프트 업로드 오류: {}
+[00:18:44.491] Server  LOG      ✓ Compiled in 139ms
+[00:18:54.691] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406367352}
+[00:18:54.692] Browser ERROR   Received NaN for the `%s` attribute. If this is expected, cast the value to a string. children
+[00:18:59.879] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406372565}
+[00:19:05.867] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406378556}
+[00:19:08.495] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406381181}
+[00:19:12.745] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406385438}
+[00:19:14.925] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:15.154] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:15.154] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:19:15.154] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406387853}
+[00:19:23.293] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406395986}
+[00:19:24.993] Server  WARN    Error: Route "/prompts/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:25.619] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:26.021] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:26.021] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:26.021] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:26.021] Browser ERROR   Error fetching prompts by subject: {}
+[00:19:26.021] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:26.021] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:26.021] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:26.021] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:19:26.021] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406398656}
+[00:19:26.021] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:26.021] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:30.055] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:30.055] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:31.708] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%95%8C%20%EC%88%98%20%EC%97%86%EB%8A%94%20%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%95%8C%20%EC%88%98%20%EC%97%86%EB%8A%94%20%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406404399}
+[00:19:32.828] Server  WARN    Error: Route "/prompts/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:33.479] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:33.818] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:33.818] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:33.818] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:33.818] Browser ERROR   Error fetching prompts by subject: {}
+[00:19:33.818] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:33.818] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:33.818] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:33.818] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:19:33.818] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406406519}
+[00:19:33.994] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:33.994] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:35.110] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:35.424] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:35.424] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/search","route":"/search"}
+[00:19:35.424] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%95%8C%20%EC%88%98%20%EC%97%86%EB%8A%94%20%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%95%8C%20%EC%88%98%20%EC%97%86%EB%8A%94%20%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406408109}
+[00:19:36.526] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:36.893] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:36.893] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/search","route":"/search"}
+[00:19:36.893] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406409589}
+[00:19:38.701] Server  WARN    Error: Route "/prompts/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:39.134] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:39.528] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:39.528] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:39.528] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:39.528] Browser ERROR   Error fetching prompts by subject: {}
+[00:19:39.528] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:39.528] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:39.528] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:39.528] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:19:39.528] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406412166}
+[00:19:39.528] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:39.528] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:41.982] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%95%8C%20%EC%88%98%20%EC%97%86%EB%8A%94%20%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%95%8C%20%EC%88%98%20%EC%97%86%EB%8A%94%20%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406414676}
+[00:19:45.370] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406418064}
+[00:19:52.090] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406424787}
+[00:19:53.359] Server  WARN    Error: Route "/prompts/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:53.898] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:19:54.295] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:54.295] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:54.295] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:54.295] Browser ERROR   Error fetching prompts by subject: {}
+[00:19:54.295] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:54.295] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:54.295] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:54.295] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:19:54.296] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:19:54.296] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:19:54.296] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406426991}
+[00:22:48.909] Server  LOG      ✓ Compiled in 138ms
+[00:22:49.410] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:22:49.410] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:22:49.410] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:22:49.410] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:22:49.410] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:22:49.410] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:22:49.410] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:22:49.410] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:23:00.797] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406613495}
+[00:23:02.765] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:03.020] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:23:03.020] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:23:03.020] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406615718}
+[00:23:03.020] Browser ERROR   {}
+[00:23:15.259] Browser ERROR   {}
+[00:26:08.183] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:08.499] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:26:08.499] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:26:08.499] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406801198}
+[00:26:12.425] Browser ERROR   {}
+[00:26:35.109] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:35.417] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:26:35.417] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:26:35.417] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406828115}
+[00:26:38.919] Browser ERROR   {}
+[00:27:33.920] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:34.216] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:27:34.216] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:27:34.216] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406886911}
+[00:27:37.646] Browser ERROR   {}
+[00:27:50.526] Browser ERROR   {}
+[00:27:57.468] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:57.852] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:27:57.852] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:27:57.852] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764406910532}
+[00:28:05.371] Browser ERROR   {}
+[00:31:18.045] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:18.324] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:18.324] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:31:18.324] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407111018}
+[00:31:48.224] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407140917}
+[00:31:49.975] Server  WARN    Error: Route "/prompts/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:49.992] Server  WARN    Error: Route "/prompts/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.011] Server  WARN    Error: Route "/prompts/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.027] Server  WARN    Error: Route "/prompts/[id]" used `params.id`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.600] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   Error fetching prompts by subject: {}
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.995] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.996] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.996] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.996] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.996] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.996] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.996] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.996] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.996] Browser ERROR   A param property was accessed directly with `params.id`. `params` is a Promise and must be unwrapped with `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:31:50.996] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:50.996] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:31:50.996] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407143681}
+[00:33:24.222] Server  LOG      ✓ Compiled in 136ms
+[00:33:24.398] Browser ERROR   Error fetching prompts by subject: {}
+[00:33:48.424] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:48.794] Browser ERROR   Error fetching prompts by subject: {}
+[00:33:48.794] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:33:48.794] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:33:48.794] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407261483}
+[00:33:54.812] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407267508}
+[00:33:56.625] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:56.879] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:33:56.879] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:33:56.879] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407269576}
+[00:34:02.594] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407275278}
+[00:34:04.482] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:04.797] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:34:04.797] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/2","route":"/prompts/[id]"}
+[00:34:04.797] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/2 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/2","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407277426}
+[00:34:04.797] Browser ERROR   Error fetching prompts by subject: {}
+[00:37:07.573] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:37:07.913] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:37:07.913] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/2","route":"/prompts/[id]"}
+[00:37:07.913] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/2 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/2","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407460550}
+[00:37:07.913] Browser ERROR   {}
+[00:37:11.329] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:37:11.621] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:37:11.621] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/2","route":"/prompts/[id]"}
+[00:37:11.621] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/2 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/2","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407464306}
+[00:37:19.407] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407472102}
+[00:37:50.067] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407502763}
+[00:37:51.949] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:37:52.249] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:37:52.249] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:37:52.249] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407504948}
+[00:39:13.268] Server  LOG      ✓ Compiled in 121ms
+[00:39:23.053] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:39:23.341] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:39:23.341] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:39:23.341] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407596035}
+[00:39:28.680] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%95%8C%20%EC%88%98%20%EC%97%86%EB%8A%94%20%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%95%8C%20%EC%88%98%20%EC%97%86%EB%8A%94%20%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407601369}
+[00:39:30.617] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407603313}
+[00:39:34.588] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407607284}
+[00:39:36.519] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:39:36.783] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:39:36.783] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:39:36.783] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407609484}
+[00:40:03.929] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%95%8C%20%EC%88%98%20%EC%97%86%EB%8A%94%20%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%95%8C%20%EC%88%98%20%EC%97%86%EB%8A%94%20%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407636623}
+[00:40:05.670] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407638366}
+[00:41:45.419] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:45.712] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:41:45.712] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:41:45.712] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407738382}
+[00:41:45.712] Browser ERROR   {}
+[00:41:48.892] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:49.190] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:41:49.190] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:41:49.190] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407741890}
+[00:42:08.558] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407761244}
+[00:42:10.483] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:42:10.879] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:42:10.879] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:42:10.879] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764407763572}
+[00:46:20.270] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:46:20.523] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:46:20.523] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:46:20.523] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408013221}
+[00:46:24.255] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408016949}
+[00:46:28.804] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408021500}
+[00:46:30.800] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:46:31.120] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:46:31.120] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:46:31.120] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408023788}
+[00:47:30.500] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408083197}
+[00:47:35.290] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408087986}
+[00:47:36.734] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:47:37.017] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:47:37.017] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompts/1","route":"/prompts/[id]"}
+[00:47:37.017] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408089703}
+[00:49:31.383] Server  LOG      ✓ Compiled in 126ms
+[00:49:43.296] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408215993}
+[00:49:49.156] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408221850}
+[00:49:50.422] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408223116}
+[00:49:56.874] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408229568}
+[00:50:10.932] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408243582}
+[00:50:10.932] Browser ERROR   Received NaN for the `%s` attribute. If this is expected, cast the value to a string. children
+[00:50:12.866] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408245560}
+[00:50:16.047] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408248737}
+[00:50:17.716] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408250409}
+[00:50:20.938] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408253631}
+[00:50:25.381] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408258076}
+[00:50:26.584] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408259280}
+[00:50:28.224] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408260912}
+[00:50:34.898] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408267593}
+[00:51:21.642] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408314302}
+[00:51:23.766] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408316451}
+[00:57:01.904] Server  LOG      ✓ Compiled in 144ms
+[00:58:16.352] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408729043}
+[00:58:21.927] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408734622}
+[00:58:24.212] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408736906}
+[00:58:25.838] Browser ERROR   uncaughtError: ReferenceError: useEffect is not defined
+[00:59:15.734] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:59:16.183] Server  LOG      ✓ Compiled in 134ms
+[00:59:16.784] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:59:17.455] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:59:17.455] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompt-detail/1","route":"/prompt-detail/[id]"}
+[00:59:17.455] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408789810}
+[00:59:29.702] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408802360}
+[00:59:29.702] Browser ERROR   Received NaN for the `%s` attribute. If this is expected, cast the value to a string. children
+[00:59:31.352] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408804049}
+[00:59:39.572] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408812259}
+[01:00:38.771] Server  LOG      ✓ Compiled in 111ms
+[01:01:45.080] Server  LOG      ✓ Compiled in 112ms
+[01:02:07.219] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408959913}
+[01:02:11.469] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408964143}
+[01:02:14.733] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408967430}
+[01:02:20.295] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408972992}
+[01:02:21.749] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408974440}
+[01:02:25.761] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408978453}
+[01:02:29.483] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408982165}
+[01:02:31.022] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764408983718}
+[01:03:08.641] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409021340}
+[01:03:09.916] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409022608}
+[01:03:11.208] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409023903}
+[01:03:15.482] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:03:15.770] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:03:15.770] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/prompt-detail/1","route":"/prompt-detail/[id]"}
+[01:03:15.770] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409028463}
+[01:03:19.209] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409031905}
+[01:03:33.474] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409046166}
+[01:03:37.069] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409049763}
+[01:03:45.112] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409057804}
+[01:03:48.926] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764409061619}

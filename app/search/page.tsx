@@ -48,14 +48,14 @@ export default function SearchPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {subjects.map((subject) => (
-                <a
+                <Link
                   key={subject.id}
-                  href={`/prompts/${subject.id}`}
+                  href={`/prompts/${subject.id}?school=${encodeURIComponent(selectedSchool)}`}
                   className="p-6 border border-gray-200 rounded-lg hover:shadow-md transition text-center"
                 >
                   <h3 className="font-semibold text-lg">{subject.name}</h3>
                   <p className="text-sm text-gray-600 mt-2">바로가기</p>
-                </a>
+                </Link>
               ))}
             </div>
           </div>

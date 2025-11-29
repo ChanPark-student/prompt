@@ -28,5 +28,5 @@ sql_app.db
 *~
 npm-debug.log*
 yarn-error.log
-talking.txt
+#talking.txt
 cli_prompt.txt

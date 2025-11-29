@@ -1,48 +1,75 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from "next/link"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import AuthModal from "@/components/auth-modal"
-import { useAuth } from "@/lib/auth-context"
-import { mockPrompts, Prompt } from "@/lib/mock-data" 
+import { useAuth, API_URL } from "@/lib/auth-context"
+import { subjects, Category } from "@/lib/subjects"
+import { Prompt } from "@/lib/mock-data" 
+
+import { useSearchParams } from "next/navigation";
 
 export default function PromptsPage({ params }: { params: { id: string } }) {
-  const [authModal, setAuthModal] = useState<"login" | "signup" | null>(null)
-  const { user, userProfile, loading } = useAuth()
-  const isAuthenticated = !!user && !user.isAnonymous
+    const searchParams = useSearchParams();
+    const schoolName = searchParams.get("school") || "알 수 없는 학교";
 
-  const [sortBy, setSortBy] = useState<"latest" | "views" | "rating">("latest")
-  const [currentPage, setCurrentPage] = useState(1)
-
-  const resolvedParams = React.use(params)
-  const prompts = mockPrompts[resolvedParams.id] || []
-
-  const schoolName = prompts.length > 0 
-    ? prompts[0].school 
-    : "알 수 없는 학교"
-  const subjectName = prompts.length > 0 
-    ? prompts[0].subject 
-    : (resolvedParams.id === "2" ? "경제성공학" : (resolvedParams.id === "3" ? "확률통계" : "알 수 없는 과목")) 
+    const [authModal, setAuthModal] = useState<"login" | "signup" | null>(null)
+    const { user, userProfile, loading } = useAuth()
+    const isAuthenticated = !!user && !user.isAnonymous
   
-  const schoolSearchPath = `/search?school=${encodeURIComponent(schoolName)}`
+    const [prompts, setPrompts] = useState<Prompt[]>([]);
+    const [loadingPrompts, setLoadingPrompts] = useState(true);
+  
+    const [sortBy, setSortBy] = useState<"latest" | "views" | "rating">("latest")
+    const [currentPage, setCurrentPage] = useState(1)
+  
+    const resolvedParams = React.use(params);
+  
+    useEffect(() => {
+      const fetchPromptsBySubject = async () => {
+        setLoadingPrompts(true);
+        try {
+          const response = await fetch(`${API_URL}/prompts/?subject_id=${resolvedParams.id}`);
+          if (!response.ok) {
+            throw new Error("Failed to fetch prompts.");
+          }
+          const data: Prompt[] = await response.json();
+          setPrompts(data);
+        } catch (error) {
+          console.error("Error fetching prompts by subject:", error);
+          setPrompts([]);
+        } finally {
+          setLoadingPrompts(false);
+        }
+      };
+  
+      fetchPromptsBySubject();
+    }, [resolvedParams.id]);
+  
+    const currentSubject = subjects.find(subject => subject.id === resolvedParams.id);
 
-  // ★★★ 1. '추천순' 정렬 로직을 (b.likes - b.dislikes)로 수정 ★★★
-  const sortedPrompts = [...prompts].sort((a, b) => {
-    if (sortBy === "rating") { // "추천순" (좋아요 - 싫어요)
-      return (b.likes - b.dislikes) - (a.likes - a.dislikes)
-    }
-    if (sortBy === "views") { // "조회순"
-      return b.views - a.views
-    }
-    // "latest" (최신순)
-    return new Date(b.date).getTime() - new Date(a.date).getTime()
-  })
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen">
+    const subjectName = currentSubject
+      ? currentSubject.name
+      : "알 수 없는 과목" // Fallback if subject not found in lib/subjects
+  
+    const schoolSearchPath = `/search?school=${encodeURIComponent(schoolName)}`
+  
+    // ★★★ 1. '추천순' 정렬 로직을 (b.likes - b.dislikes)로 수정 ★★★
+    const sortedPrompts = [...prompts].sort((a, b) => {
+      if (sortBy === "rating") { // "추천순" (좋아요 - 싫어요)
+        return ((b.likes || 0) - (b.dislikes || 0)) - ((a.likes || 0) - (a.dislikes || 0))
+      }
+      if (sortBy === "views") { // "조회순"
+        return (b.views || 0) - (a.views || 0)
+      }
+      // "latest" (최신순)
+      return new Date(b.date).getTime() - new Date(a.date).getTime()
+    })
+  
+    if (loading || loadingPrompts) {
+      return (      <div className="flex justify-center items-center min-h-screen">
         Loading...
       </div>
     )
@@ -160,8 +187,8 @@ export default function PromptsPage({ params }: { params: { id: string } }) {
                           </div>
                           {/* ★★★ 2. '추천수'를 (prompt.likes - prompt.dislikes)로 수정 ★★★ */}
                           <div className="flex gap-4 text-sm text-gray-600 items-center">
-                            <span>조회수 {prompt.views}</span>
-                            <span>추천수 {prompt.likes - prompt.dislikes}</span>
+                            <span>조회수 {prompt.views || 0}</span>
+                            <span>추천수 {(prompt.likes || 0) - (prompt.dislikes || 0)}</span>
                           </div>
                         </div>
                       </Link>
