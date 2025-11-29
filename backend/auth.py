@@ -1,7 +1,15 @@
-from passlib.context import CryptContext
-from jose import JWTError, jwt
-from datetime import datetime, timedelta
 from typing import Optional
+from sqlalchemy.orm import Session
+
+from backend.database import get_db, User
+from fastapi.security import OAuth2PasswordBearer
+from fastapi import Depends, HTTPException, status
+from jose import JWTError, jwt
+from passlib.context import CryptContext
+from datetime import datetime, timedelta
+
+# OAuth2 scheme
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token", auto_error=False)
 
 # Configure password hashing context
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -38,3 +46,16 @@ def verify_access_token(token: str, credentials_exception):
         return username
     except JWTError:
         raise credentials_exception
+
+def get_current_user_or_none(token: Optional[str] = Depends(oauth2_scheme), db: Session = Depends(get_db)) -> Optional[User]:
+    if token is None:
+        return None
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        username: str = payload.get("sub")
+        if username is None:
+            return None
+        user = db.query(User).filter(User.username == username).first()
+        return user
+    except JWTError:
+        return None

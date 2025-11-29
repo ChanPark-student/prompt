@@ -13,7 +13,7 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
   const router = useRouter() 
   const [authModal, setAuthModal] = useState<"login" | "signup" | null>(null)
   
-  const { user, userProfile, loading: authLoading } = useAuth()
+  const { user, userProfile, loading: authLoading, token } = useAuth()
   const isAuthenticated = !!user && !user.isAnonymous
 
   const [prompt, setPrompt] = useState<Prompt | null>(null);
@@ -25,8 +25,14 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
     const fetchPrompt = async () => {
       if (!resolvedParams.id) return;
       setLoading(true);
+
+      const headers: HeadersInit = {};
+      if (token) {
+        headers['Authorization'] = `Bearer ${token}`;
+      }
+
       try {
-        const response = await fetch(`${API_URL}/prompts/${resolvedParams.id}`);
+        const response = await fetch(`${API_URL}/prompts/${resolvedParams.id}`, { headers });
         if (!response.ok) {
           throw new Error("Prompt not found");
         }
@@ -41,22 +47,74 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
     };
 
     fetchPrompt();
-  }, [resolvedParams.id]);
+  }, [resolvedParams.id, token]);
 
 
-  // 2. 이 글의 작성자가 'user' 본인인지 확인합니다.
-  const isAuthor = isAuthenticated && userProfile && prompt && prompt.author === userProfile.name;
+  const isAuthor = isAuthenticated && user && prompt && prompt.owner_id === user.id;
   
-  // 3. 'isAuthor'가 true이면, 'isBlurred'는 처음부터 false가 됩니다.
-  const [isBlurred, setIsBlurred] = useState(!isAuthor)
-  const [showFeedback, setShowFeedback] = useState(false)
-  const [feedback, setFeedback] = useState<'like' | 'dislike' | null>(null)
+  const [isContentVisible, setIsContentVisible] = useState(false);
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [userFeedback, setUserFeedback] = useState<"like" | "dislike" | null>(null);
 
   useEffect(() => {
-    // Update isBlurred when isAuthor changes (after prompt has been fetched)
-    setIsBlurred(!isAuthor);
-  }, [isAuthor]);
+    // Initialize userFeedback from fetched prompt
+    setUserFeedback(prompt?.current_user_feedback || null);
+  }, [prompt]);
 
+  const handleViewPrompt = async () => {
+    setIsContentVisible(true);
+    setShowFeedback(true);
+
+    if (!isAuthor && isAuthenticated && prompt) {
+      try {
+        const response = await fetch(`${API_URL}/prompts/${prompt.id}/increment-view`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+
+        if (response.ok) {
+          const updatedPrompt = await response.json();
+          setPrompt(updatedPrompt); // Update prompt state with new view count
+        }
+      } catch (error) {
+        console.error("Failed to increment view count", error);
+      }
+    }
+  };
+
+  const handleFeedback = async (type: "like" | "dislike") => {
+    if (!isAuthenticated || !prompt) {
+      alert("로그인 후 피드백을 남길 수 있습니다.");
+      setAuthModal("login");
+      return;
+    }
+
+    try {
+      const response = await fetch(`${API_URL}/prompts/${prompt.id}/feedback`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ feedback_type: type })
+      });
+
+      if (response.ok) {
+        const updatedPrompt = await response.json();
+        setPrompt(updatedPrompt); // Update prompt state with new counts
+        setUserFeedback(updatedPrompt.current_user_feedback); // Update user's feedback state
+      } else {
+        const errorData = await response.json();
+        alert(errorData.detail || "피드백 처리 실패");
+      }
+    } catch (error) {
+      console.error("Failed to submit feedback", error);
+      alert("피드백 처리 중 오류가 발생했습니다.");
+    }
+  };
+  
   if (loading || authLoading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
@@ -127,20 +185,17 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
                           </div>
             <div className="relative mb-6">
               <div 
-                className={`p-6 bg-white rounded-lg border border-gray-200 min-h-[200px] transition-all duration-300 ${isBlurred ? 'blur-md' : 'blur-none'}`}
+                className={`p-6 bg-white rounded-lg border border-gray-200 min-h-[200px] transition-all duration-300 ${!isAuthor && !isContentVisible ? 'blur-md' : 'blur-none'}`}
               >
                 <p className="text-gray-800 whitespace-pre-wrap">{prompt.content}</p>
               </div>
               
-              {/* 4. 'isAuthor'가 false이고 'isBlurred'가 true일 때만 블러 오버레이를 표시합니다. */}
-              {!isAuthor && isBlurred && (
+              {/* Overlay is now controlled by the new state logic */}
+              {!isAuthor && !isContentVisible && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/50 backdrop-blur-sm">
                   <p className="font-semibold text-lg text-gray-700 mb-4">프롬프트 내용을 확인하세요</p>
                   <button
-                    onClick={() => {
-                      setIsBlurred(false)
-                      setShowFeedback(true)
-                    }}
+                    onClick={handleViewPrompt}
                     className="px-6 py-3 bg-[#9DB78C] text-white rounded-full font-medium hover:bg-[#8AA876]"
                   >
                     프롬프트 보기
@@ -154,9 +209,9 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
               <div className="flex justify-center items-center gap-4 p-4 bg-white rounded-lg shadow-sm">
                 <p className="font-medium text-gray-700">이 프롬프트가 유용했나요?</p>
                 <button 
-                  onClick={() => setFeedback('like')}
-                  disabled={feedback === 'like'}
-                  className={`flex items-center gap-1 ${feedback === 'like' ? 'text-blue-500 font-bold' : 'text-gray-600 hover:text-blue-500'}`}
+                  onClick={() => handleFeedback('like')}
+                  disabled={!isAuthenticated || (userFeedback === 'like' && prompt?.owner_id === user?.id)}
+                  className={`flex items-center gap-1 ${userFeedback === 'like' ? 'text-blue-500 font-bold' : 'text-gray-600 hover:text-blue-500'}`}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21H7.42a2 2 0 01-1.965-2.22L6 11.83V5c0-1.1.9-2 2-2h4a2 2 0 012 2v5z" />
@@ -164,9 +219,9 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
                   좋아요
                 </button>
                 <button 
-                  onClick={() => setFeedback('dislike')}
-                  disabled={feedback === 'dislike'}
-                  className={`flex items-center gap-1 ${feedback === 'dislike' ? 'text-red-500 font-bold' : 'text-gray-600 hover:text-red-500'}`}
+                  onClick={() => handleFeedback('dislike')}
+                  disabled={!isAuthenticated || (userFeedback === 'dislike' && prompt?.owner_id === user?.id)}
+                  className={`flex items-center gap-1 ${userFeedback === 'dislike' ? 'text-red-500 font-bold' : 'text-gray-600 hover:text-red-500'}`}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 14H5.236a2 2 0 01-1.789-2.894l3.5-7A2 2 0 018.737 3h7.84a2 2 0 011.965 2.22L18 12.17V19c0 1.1-.9 2-2 2h-4a2 2 0 01-2-2v-5z" />

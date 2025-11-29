@@ -3,11 +3,11 @@ from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 from sqlalchemy import or_
 from datetime import datetime, timedelta
-from typing import List
+from typing import List, Optional
 
 from backend import database as models, schemas
 from backend.database import get_db, create_db_and_tables
-from backend.auth import get_password_hash, verify_password, create_access_token, verify_access_token
+from backend.auth import get_password_hash, verify_password, create_access_token, verify_access_token, get_current_user_or_none
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -127,7 +127,8 @@ def read_prompts(
     skip: int = 0,
     limit: int = 100,
     subject_id: str | None = None,
-    db: Session = Depends(get_db)
+    db: Session = Depends(get_db),
+    current_user: Optional[models.User] = Depends(get_current_user_or_none)
 ):
     query = db.query(models.Prompt)
 
@@ -136,11 +137,113 @@ def read_prompts(
         query = query.filter(models.Prompt.subject == subject_name)
     
     prompts = query.offset(skip).limit(limit).all()
-    return prompts
+
+    # Manually populate current_user_feedback for each prompt
+    response_prompts = []
+    for db_prompt in prompts:
+        response_prompt = schemas.Prompt.from_orm(db_prompt)
+        if current_user:
+            user_feedback = db.query(models.PromptFeedback).filter(
+                models.PromptFeedback.user_id == current_user.id,
+                models.PromptFeedback.prompt_id == db_prompt.id
+            ).first()
+            response_prompt.current_user_feedback = user_feedback.feedback_type if user_feedback else None
+        response_prompts.append(response_prompt)
+        
+    return response_prompts
 
 @app.get("/prompts/{prompt_id}", response_model=schemas.Prompt)
-def read_prompt(prompt_id: int, db: Session = Depends(get_db)):
+def read_prompt(
+    prompt_id: int, 
+    db: Session = Depends(get_db),
+    current_user: Optional[models.User] = Depends(get_current_user_or_none)
+):
     db_prompt = db.query(models.Prompt).filter(models.Prompt.id == prompt_id).first()
     if db_prompt is None:
         raise HTTPException(status_code=404, detail="Prompt not found")
+
+    # Check for current user's feedback
+    user_feedback = None
+    if current_user: # Only query if current_user is authenticated
+        user_feedback = db.query(models.PromptFeedback).filter(
+            models.PromptFeedback.user_id == current_user.id,
+            models.PromptFeedback.prompt_id == prompt_id
+        ).first()
+    
+    # Create a schemas.Prompt instance and then set the current_user_feedback
+    response_prompt = schemas.Prompt.from_orm(db_prompt)
+    response_prompt.current_user_feedback = user_feedback.feedback_type if user_feedback else None
+    
+    return response_prompt
+@app.post("/prompts/{prompt_id}/feedback", response_model=schemas.Prompt)
+def give_prompt_feedback(
+    prompt_id: int,
+    feedback_data: schemas.PromptFeedbackBase,
+    db: Session = Depends(get_db),
+    current_user: models.User = Depends(get_current_user)
+):
+    db_prompt = db.query(models.Prompt).filter(models.Prompt.id == prompt_id).first()
+    if db_prompt is None:
+        raise HTTPException(status_code=404, detail="Prompt not found")
+
+    existing_feedback = db.query(models.PromptFeedback).filter(
+        models.PromptFeedback.user_id == current_user.id,
+        models.PromptFeedback.prompt_id == prompt_id
+    ).first()
+
+    feedback_type = feedback_data.feedback_type
+
+    if feedback_type not in ["like", "dislike"]:
+        raise HTTPException(status_code=400, detail="Invalid feedback type")
+
+    if existing_feedback:
+        if existing_feedback.feedback_type == feedback_type:
+            # User is toggling off their existing feedback (e.g., liked, clicks like again)
+            if feedback_type == "like":
+                db_prompt.likes -= 1
+            else:
+                db_prompt.dislikes -= 1
+            db.delete(existing_feedback)
+        else:
+            # User is changing feedback (e.g., liked, then dislikes)
+            if feedback_type == "like":
+                db_prompt.likes += 1
+                db_prompt.dislikes -= 1
+            else: # feedback_type == "dislike"
+                db_prompt.dislikes += 1
+                db_prompt.likes -= 1
+            existing_feedback.feedback_type = feedback_type
+    else:
+        # No existing feedback, create new
+        if feedback_type == "like":
+            db_prompt.likes += 1
+        else:
+            db_prompt.dislikes += 1
+        
+        new_feedback = models.PromptFeedback(
+            user_id=current_user.id,
+            prompt_id=prompt_id,
+            feedback_type=feedback_type
+        )
+        db.add(new_feedback)
+
+    db.commit()
+    db.refresh(db_prompt)
+    return db_prompt
+
+@app.post("/prompts/{prompt_id}/increment-view", response_model=schemas.Prompt)
+def increment_prompt_view(
+    prompt_id: int, 
+    db: Session = Depends(get_db),
+    current_user: models.User = Depends(get_current_user)
+):
+    db_prompt = db.query(models.Prompt).filter(models.Prompt.id == prompt_id).first()
+    if db_prompt is None:
+        raise HTTPException(status_code=404, detail="Prompt not found")
+    
+    # Increment view count and commit
+    db_prompt.views += 1
+    db.commit()
+    db.refresh(db_prompt)
+    
     return db_prompt

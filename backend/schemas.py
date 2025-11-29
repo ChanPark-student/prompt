@@ -16,6 +16,10 @@ class Prompt(PromptBase):
     owner_id: int
     created_at: datetime
     author: str
+    views: int
+    likes: int
+    dislikes: int
+    current_user_feedback: Optional[str] = None # 'like', 'dislike', or None
 
     class Config:
         from_attributes = True
@@ -54,3 +58,18 @@ class UserResponse(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str
+
+class PromptFeedbackBase(BaseModel):
+    feedback_type: str
+
+class PromptFeedbackCreate(PromptFeedbackBase):
+    prompt_id: int
+
+class PromptFeedback(PromptFeedbackBase):
+    id: int
+    user_id: int
+    prompt_id: int
+    created_at: datetime
+
+    class Config:
+        from_attributes = True
