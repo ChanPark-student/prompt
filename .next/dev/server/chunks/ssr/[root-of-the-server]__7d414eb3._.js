@@ -49,6 +49,28 @@ const AuthProvider = ({ children })=>{
         return null;
     });
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [totalPrompts, setTotalPrompts] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [totalLikes, setTotalLikes] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        async function fetchStats() {
+            try {
+                const [promptsCountResponse, totalLikesResponse] = await Promise.all([
+                    fetch(`${API_URL}/stats/prompts/count`),
+                    fetch(`${API_URL}/stats/prompts/total-likes`)
+                ]);
+                if (!promptsCountResponse.ok || !totalLikesResponse.ok) {
+                    throw new Error("Failed to fetch statistics");
+                }
+                const promptsCount = await promptsCountResponse.json();
+                const totalLikesCount = await totalLikesResponse.json();
+                setTotalPrompts(promptsCount);
+                setTotalLikes(totalLikesCount);
+            } catch (error) {
+                console.error("Error fetching statistics:", error);
+            }
+        }
+        fetchStats();
+    }, []);
     // --- Helper function to get user profile after login ---
     const fetchUserProfile = async (authToken)=>{
         // This endpoint needs to be created on the backend
@@ -141,6 +163,8 @@ const AuthProvider = ({ children })=>{
         user,
         token,
         loading,
+        totalPrompts,
+        totalLikes,
         login,
         signupAndCreateProfile,
         logout
@@ -150,7 +174,7 @@ const AuthProvider = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/lib/auth-context.tsx",
-        lineNumber: 153,
+        lineNumber: 183,
         columnNumber: 10
     }, ("TURBOPACK compile-time value", void 0));
 };

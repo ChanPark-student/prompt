@@ -27,6 +27,8 @@ interface AuthContextType {
   user: UserProfile | null;
   token: string | null;
   loading: boolean;
+  totalPrompts: number;
+  totalLikes: number;
   login: (email: string, pass: string) => Promise<void>;
   signupAndCreateProfile: (email: string, pass:string, profileData: ProfileData) => Promise<void>;
   logout: () => void;
@@ -43,6 +45,32 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     return null;
   });
   const [loading, setLoading] = useState(true);
+  const [totalPrompts, setTotalPrompts] = useState(0);
+  const [totalLikes, setTotalLikes] = useState(0);
+
+  useEffect(() => {
+    async function fetchStats() {
+      try {
+        const [promptsCountResponse, totalLikesResponse] = await Promise.all([
+          fetch(`${API_URL}/stats/prompts/count`),
+          fetch(`${API_URL}/stats/prompts/total-likes`),
+        ]);
+
+        if (!promptsCountResponse.ok || !totalLikesResponse.ok) {
+          throw new Error("Failed to fetch statistics");
+        }
+
+        const promptsCount = await promptsCountResponse.json();
+        const totalLikesCount = await totalLikesResponse.json();
+
+        setTotalPrompts(promptsCount);
+        setTotalLikes(totalLikesCount);
+      } catch (error) {
+        console.error("Error fetching statistics:", error);
+      }
+    }
+    fetchStats();
+  }, []);
 
   // --- Helper function to get user profile after login ---
   const fetchUserProfile = async (authToken: string) => {
@@ -145,6 +173,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     user,
     token,
     loading,
+    totalPrompts,
+    totalLikes,
     login,
     signupAndCreateProfile,
     logout,

@@ -6,10 +6,7 @@ import { useRouter } from "next/navigation"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import AuthModal from "@/components/auth-modal"
-import { useAuth } from "@/lib/auth-context"
-
-// ★★★ 2. 검색을 위한 학교 목록 (API에서 가져옴) ★★★
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"
+import { useAuth, API_URL } from "@/lib/auth-context"
 
 export default function Home() {
   const router = useRouter()
@@ -20,6 +17,11 @@ export default function Home() {
   // 새 State: API에서 가져온 학교 목록과 로딩 상태
   const [schools, setSchools] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
+
+  // 새 State: 통계 데이터와 로딩 상태
+  const [totalPrompts, setTotalPrompts] = useState(0)
+  const [totalLikes, setTotalLikes] = useState(0)
+  const [loadingStats, setLoadingStats] = useState(true)
 
   // 학교 목록을 API에서 가져오는 useEffect
   useEffect(() => {
@@ -41,10 +43,38 @@ export default function Home() {
     fetchSchools()
   }, [])
 
+  // 통계 데이터를 API에서 가져오는 useEffect
+  useEffect(() => {
+    async function fetchStats() {
+      try {
+        const [promptsCountResponse, totalLikesResponse] = await Promise.all([
+          fetch(`${API_URL}/stats/prompts/count`),
+          fetch(`${API_URL}/stats/prompts/total-likes`),
+        ])
+
+        if (!promptsCountResponse.ok || !totalLikesResponse.ok) {
+          throw new Error("Failed to fetch statistics")
+        }
+
+        const promptsCount = await promptsCountResponse.json()
+        const totalLikesCount = await totalLikesResponse.json()
+
+        setTotalPrompts(promptsCount)
+        setTotalLikes(totalLikesCount)
+      } catch (error) {
+        console.error("Error fetching statistics:", error)
+      } finally {
+        setLoadingStats(false)
+      }
+    }
+    fetchStats()
+  }, [])
+
   // ★★★ 3. 자동완성을 위한 새 State들 ★★★
   const [searchTerm, setSearchTerm] = useState("") // 현재 입력창의 텍스트
   const [suggestions, setSuggestions] = useState<string[]>([]) // 필터링된 추천 목록
   const [showSuggestions, setShowSuggestions] = useState(false) // 목록을 보여줄지 여부
+  const [showUnregisteredSchoolMessage, setShowUnregisteredSchoolMessage] = useState(false) // 등록되지 않은 학교 메시지 상태
 
   // ★★★ 4. 검색창 밖을 클릭했는지 감지하기 위한 Ref ★★★
   const searchWrapperRef = useRef<HTMLDivElement>(null)
@@ -54,6 +84,7 @@ export default function Home() {
     function handleClickOutside(event: MouseEvent) {
       if (searchWrapperRef.current && !searchWrapperRef.current.contains(event.target as Node)) {
         setShowSuggestions(false)
+        setShowUnregisteredSchoolMessage(false) // 외부 클릭 시 메시지도 숨김
       }
     }
     document.addEventListener("mousedown", handleClickOutside)
@@ -70,7 +101,16 @@ export default function Home() {
       return
     }
     if (school.trim()) {
-      // 검색 실행 시, 추천 목록을 닫고 검색어를 확정
+      // 학교가 실제 DB 목록에 있는지 확인
+      if (!schools.includes(school)) {
+        setShowUnregisteredSchoolMessage(true)
+        setSearchTerm(school) // 입력된 학교 이름을 유지
+        setShowSuggestions(false) // 추천 목록 숨김
+        return
+      }
+
+      // 등록된 학교인 경우
+      setShowUnregisteredSchoolMessage(false)
       setSearchTerm(school)
       setShowSuggestions(false)
       router.push(`/search?school=${school}`)
@@ -158,6 +198,11 @@ export default function Home() {
                 ))}
               </ul>
             )}
+
+            {/* 등록되지 않은 학교 메시지 */}
+            {showUnregisteredSchoolMessage && (
+              <p className="mt-2 text-red-500 text-sm">등록되지 않은 학교입니다. 다시 확인해주세요.</p>
+            )}
           </div>
 
           <div className="flex justify-center">
@@ -173,12 +218,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
-              <div className="text-3xl font-bold text-[#9DB78C] mb-2">수천개</div>
-              <p className="text-gray-600">학습 자료가 있어요</p>
+              <div className="text-3xl font-bold text-[#9DB78C] mb-2">{loadingStats ? "로딩 중..." : totalPrompts.toLocaleString()}</div>
+              <p className="text-gray-600">업로드 된 학습 자료</p>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
-              <div className="text-3xl font-bold text-[#9DB78C] mb-2">무료로</div>
-              <p className="text-gray-600">모든 자료를 볼 수 있어요</p>
+              <div className="text-3xl font-bold text-[#9DB78C] mb-2">{loadingStats ? "로딩 중..." : totalLikes.toLocaleString()}</div>
+              <p className="text-gray-600">총 추천수</p>
             </div>
             <div className="text-center p-6 bg-gray-50 rounded-lg shadow-sm">
               <div className="text-3xl font-bold text-[#9DB78C] mb-2">쉽게</div>

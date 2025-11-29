@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
-from sqlalchemy import or_
+from sqlalchemy import or_, func
 from datetime import datetime, timedelta
 from typing import List, Optional
 
@@ -86,6 +86,16 @@ def read_schools(db: Session = Depends(get_db)):
 def read_subjects(db: Session = Depends(get_db)):
     subjects = db.query(models.Subject).all()
     return subjects
+
+
+@app.get("/stats/prompts/count", response_model=int)
+def get_prompts_count(db: Session = Depends(get_db)):
+    return db.query(models.Prompt).count()
+
+@app.get("/stats/prompts/total-likes", response_model=int)
+def get_total_likes(db: Session = Depends(get_db)):
+    total_likes = db.query(func.sum(models.Prompt.likes)).scalar()
+    return total_likes if total_likes is not None else 0
 
 @app.post("/signup", response_model=schemas.UserResponse, status_code=status.HTTP_201_CREATED)
 def signup(user: schemas.UserCreate, db: Session = Depends(get_db)):

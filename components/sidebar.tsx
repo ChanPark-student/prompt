@@ -10,15 +10,15 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ onLogin, onSignup }: SidebarProps) {
-  // 3. '전역 관리자'로부터 실제 로그인 정보 가져오기
-  const { user, userProfile } = useAuth()
+  // 3. '전역 관리자'로부터 실제 로그인 정보 및 통계 가져오기
+  const { user, totalPrompts, totalLikes } = useAuth()
   const isAuthenticated = !!user && !user.isAnonymous
 
   return (
     <aside className="hidden md:block w-64 bg-white border-r border-gray-200 py-8">
       <div className="px-6">
         {/* 4. 로그인 되었을 때만 프로필과 통계를 보여줌 */}
-        {isAuthenticated && (
+        {isAuthenticated && user && (
           <>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-12 h-12 bg-[#9DB78C] rounded-full flex items-center justify-center">
@@ -26,19 +26,19 @@ export default function Sidebar({ onLogin, onSignup }: SidebarProps) {
                   <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                 </svg>
               </div>
-              {/* 5. 'userProfile'에서 실제 사용자 이름 가져오기 */}
-              <span className="font-bold">{userProfile?.name}</span>
+              {/* 5. 'user'에서 실제 사용자 이름 가져오기 */}
+              <span className="font-bold">{user?.name}</span>
             </div>
 
-            {/* 6. 요청하신 통계 수정 (텍스트/숫자 순서, 업로드 1로 변경) */}
+            {/* 6. 요청하신 통계 수정 (동적 데이터로 변경) */}
             <div className="space-y-1 mb-8">
               <div className="flex justify-between text-sm text-gray-600">
                 <span>업로드</span>
-                <span>1</span>
+                <span>{totalPrompts}</span>
               </div>
               <div className="flex justify-between text-sm text-gray-600">
                 <span>평점</span>
-                <span>0</span>
+                <span>{totalLikes}</span>
               </div>
             </div>
 

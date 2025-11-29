@@ -1,183 +1,21 @@
-[00:00:03.197] Server  LOG      ✓ Ready in 2.1s
-[00:32:16.861] Server  LOG      ○ Compiling / ...
-[00:32:19.476] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:32:20.350] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:32:20.350] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:32:20.350] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764421921498}
-[00:40:25.735] Server  LOG      ✓ Compiled in 136ms
-[00:40:29.624] Server  LOG      ✓ Compiled in 238ms
-[00:40:30.355] Browser ERROR   ./app/page.tsx:84:48
-Parsing ecmascript source code failed
-  82 |     const value = e.target.value
-  83 |     setSearchTerm(value)
-> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
-     |                                                ^^^^^^
-  85 |       const filtered = schools.filter(school =>
-  86 |         school.toLowerCase().includes(value.toLowerCase())
-  87 |       )
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[00:40:48.344] Browser ERROR   ./app/page.tsx:84:48
-Parsing ecmascript source code failed
-  82 |     const value = e.target.value
-  83 |     setSearchTerm(value)
-> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
-     |                                                ^^^^^^
-  85 |       const filtered = schools.filter(school =>
-  86 |         school.toLowerCase().includes(value.toLowerCase())
-  87 |       )
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[00:41:08.343] Browser ERROR   ./app/page.tsx:84:48
-Parsing ecmascript source code failed
-  82 |     const value = e.target.value
-  83 |     setSearchTerm(value)
-> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
-     |                                                ^^^^^^
-  85 |       const filtered = schools.filter(school =>
-  86 |         school.toLowerCase().includes(value.toLowerCase())
-  87 |       )
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[00:41:13.351] Browser ERROR   ./app/page.tsx:84:48
-Parsing ecmascript source code failed
-  82 |     const value = e.target.value
-  83 |     setSearchTerm(value)
-> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
-     |                                                ^^^^^^
-  85 |       const filtered = schools.filter(school =>
-  86 |         school.toLowerCase().includes(value.toLowerCase())
-  87 |       )
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[00:41:18.348] Browser ERROR   ./app/page.tsx:84:48
-Parsing ecmascript source code failed
-  82 |     const value = e.target.value
-  83 |     setSearchTerm(value)
-> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
-     |                                                ^^^^^^
-  85 |       const filtered = schools.filter(school =>
-  86 |         school.toLowerCase().includes(value.toLowerCase())
-  87 |       )
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[00:41:28.347] Browser ERROR   ./app/page.tsx:84:48
-Parsing ecmascript source code failed
-  82 |     const value = e.target.value
-  83 |     setSearchTerm(value)
-> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
-     |                                                ^^^^^^
-  85 |       const filtered = schools.filter(school =>
-  86 |         school.toLowerCase().includes(value.toLowerCase())
-  87 |       )
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[00:41:37.347] Browser ERROR   ./app/page.tsx:84:48
-Parsing ecmascript source code failed
-  82 |     const value = e.target.value
-  83 |     setSearchTerm(value)
-> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
-     |                                                ^^^^^^
-  85 |       const filtered = schools.filter(school =>
-  86 |         school.toLowerCase().includes(value.toLowerCase())
-  87 |       )
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[00:42:02.908] Browser ERROR   ./app/page.tsx:84:48
-Parsing ecmascript source code failed
-  82 |     const value = e.target.value
-  83 |     setSearchTerm(value)
-> 84 |     if (value.length > 0 && !loading) { # Only filter if not loading
-     |                                                ^^^^^^
-  85 |       const filtered = schools.filter(school =>
-  86 |         school.toLowerCase().includes(value.toLowerCase())
-  87 |       )
-
-Expected ';', '}' or <eof>
-
-Import traces:
-  Client Component Browser:
-    ./app/page.tsx [Client Component Browser]
-    ./app/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/page.tsx [Client Component SSR]
-    ./app/page.tsx [Server Component]
-[00:42:27.283] Server  LOG      ✓ Compiled in 145ms
-[00:43:16.038] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422577781}
-[00:43:19.051] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422580802}
-[00:43:22.197] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422583945}
-[00:43:25.286] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422587034}
-[00:43:54.073] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422615821}
-[00:43:56.614] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422618352}
-[00:43:57.875] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422619613}
-[00:44:03.800] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422625548}
-[00:44:08.219] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422629968}
-[00:44:09.776] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422631526}
-[00:44:13.312] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/1 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/1","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422635048}
-[00:44:19.962] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompts/1?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/prompts/[id]","o":"http://localhost:3000/prompts/1?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422641700}
-[00:44:20.664] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%97%B0%EC%84%B8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422642399}
-[00:44:22.327] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764422644076}
+[00:00:03.229] Server  LOG      ✓ Ready in 2.1s
+[00:00:08.165] Server  LOG      ○ Compiling /my-page ...
+[00:00:10.958] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:11.227] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:11.227] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/my-page","route":"/my-page"}
+[00:00:11.227] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764427392419}
+[00:00:11.227] Browser ERROR   {}
+[00:00:16.845] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:17.571] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:17.936] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:17.936] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:17.936] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764427399145}
+[00:00:27.637] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90 color: rgb(120, 120, 120) color: inherit {"dp":"/search","o":"http://localhost:3000/search?school=%EC%A0%84%EB%82%A8%EB%8C%80%ED%95%99%EA%B5%90","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764427408841}
+[00:00:30.446] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764427411630}
+[00:00:36.340] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/upload color: rgb(120, 120, 120) color: inherit {"dp":"/upload","o":"http://localhost:3000/upload","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764427417537}
+[00:00:47.684] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764427428886}
+[00:00:50.267] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:50.523] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:50.523] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/my-page","route":"/my-page"}
+[00:00:50.523] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764427431729}
+[00:00:57.295] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/prompt-detail/3 color: rgb(120, 120, 120) color: inherit {"dp":"/prompt-detail/[id]","o":"http://localhost:3000/prompt-detail/3","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764427438489}
