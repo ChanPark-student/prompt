@@ -12,8 +12,8 @@ import { Prompt } from "@/lib/mock-data" // Keep Prompt interface for now, might
 
 export default function MyPage() {
   const [authModal, setAuthModal] = useState<"login" | "signup" | null>(null)
-  const { user, userProfile, loading, token } = useAuth()
-  const isAuthenticated = !!user && !user.isAnonymous
+  const { user, loading, token } = useAuth()
+  const isAuthenticated = !!user
 
   const [userPrompts, setUserPrompts] = useState<Prompt[]>([]);
   const [loadingPrompts, setLoadingPrompts] = useState(true);
@@ -61,6 +61,19 @@ export default function MyPage() {
     )
   }
 
+  const displayGenderInKorean = (gender?: string) => {
+    switch (gender?.toLowerCase()) {
+      case 'male':
+        return '남성';
+      case 'female':
+        return '여성';
+      case 'other':
+        return '기타';
+      default:
+        return gender || ''; // Return original or empty string if not recognized
+    }
+  };
+
   return (
     <>
       <Header
@@ -85,9 +98,9 @@ export default function MyPage() {
                     </svg>
                   </div>
                   <div>
-                    <h1 className="text-2xl font-bold text-white mb-0.5">{userProfile?.name}</h1>
-                    <p className="text-white/80">{userProfile?.school}</p>
-                    <p className="text-sm text-white/70">{userProfile?.studentId}학번 ({userProfile?.gender} | {userProfile?.age}세)</p>
+                    <h1 className="text-2xl font-bold text-white mb-0.5">{user?.name}</h1>
+                    <p className="text-white/80">{user?.school}</p>
+                    <p className="text-sm text-white/70">{user?.studentId}학번 ({displayGenderInKorean(user?.gender)} | {user?.age}세)</p>
                   </div>
                 </div>
                 <div className="text-right">

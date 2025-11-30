@@ -6,7 +6,6 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import AuthModal from "@/components/auth-modal"
 import { useAuth, API_URL } from "@/lib/auth-context"
-import { subjects, Category } from "@/lib/subjects"
 import { Prompt } from "@/lib/mock-data" 
 
 import { useSearchParams } from "next/navigation";
@@ -47,12 +46,8 @@ export default function PromptsPage({ params }: { params: { id: string } }) {
   
       fetchPromptsBySubject();
     }, [resolvedParams.id]);
-  
-    const currentSubject = subjects.find(subject => subject.id === resolvedParams.id);
 
-    const subjectName = currentSubject
-      ? currentSubject.name
-      : "알 수 없는 과목" // Fallback if subject not found in lib/subjects
+    const subjectName = prompts.length > 0 ? prompts[0].subject : "알 수 없는 과목";
   
     const schoolSearchPath = `/search?school=${encodeURIComponent(schoolName)}`
   
