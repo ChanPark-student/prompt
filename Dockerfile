@@ -1,5 +1,5 @@
 # Stage 1: Build the Next.js frontend
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Install dependencies first to leverage Docker layer caching
