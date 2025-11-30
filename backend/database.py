@@ -4,14 +4,27 @@ from sqlalchemy.schema import UniqueConstraint
 from datetime import datetime
 import os
 
-# Database URL for SQLite
-# Use a relative path for the database file
-DATABASE_URL = "sqlite:///./sql_app.db"
+# --- Database Configuration ---
+# Check for a production DATABASE_URL environment variable (from Render, etc.)
+# If it exists, use it. Otherwise, fall back to a local SQLite database.
+SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
 
-# Create the SQLAlchemy engine
-engine = create_engine(
-    DATABASE_URL, connect_args={"check_same_thread": False}
-)
+# For production PostgreSQL on services like Render, the URL might start with "postgres://"
+# but SQLAlchemy 1.4+ requires "postgresql://".
+if SQLALCHEMY_DATABASE_URL and SQLALCHEMY_DATABASE_URL.startswith("postgres://"):
+    SQLALCHEMY_DATABASE_URL = SQLALCHEMY_DATABASE_URL.replace("postgres://", "postgresql://", 1)
+
+# If no production URL is found, use local SQLite
+if not SQLALCHEMY_DATABASE_URL:
+    print("--- No DATABASE_URL found, falling back to SQLite ---")
+    SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
+    # The 'check_same_thread' argument is specific to SQLite
+    engine = create_engine(
+        SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
+    )
+else:
+    print("--- DATABASE_URL found, connecting to production database ---")
+    engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
 # Create a SessionLocal class
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
