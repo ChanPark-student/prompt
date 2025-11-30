@@ -22,7 +22,7 @@ COPY tsconfig.json .
 RUN npm run build
 
 # Stage 2: Final image with Python, Node.js, and both services
-FROM python:3.9-slim
+FROM python:3.10-slim
 
 # Set working directory
 WORKDIR /app
