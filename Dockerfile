@@ -51,7 +51,7 @@ COPY backend ./backend
 
 # Expose ports for Next.js and FastAPI
 EXPOSE 3000
-EXPOSE 8000
+EXPOSE 10000
 
 # Create log directories for supervisor
 RUN mkdir -p /var/log
