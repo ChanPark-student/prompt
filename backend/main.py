@@ -282,7 +282,29 @@ def give_prompt_feedback(
     db.refresh(db_prompt)
     return db_prompt
 
-@app.post("/prompts/{prompt_id}/increment-view", response_model=schemas.Prompt)
+
+@app.post("/users/bootstrap-admin", response_model=schemas.UserResponse, include_in_schema=False)
+def bootstrap_admin(
+    user_action: schemas.UserAction,
+    db: Session = Depends(get_db),
+):
+    # Check if any admin user already exists
+    if db.query(models.User).filter(models.User.is_admin == True).first():
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="An admin user already exists. This endpoint is for initial setup only.",
+        )
+
+    user_to_bootstrap = db.query(models.User).filter(models.User.username == user_action.username).first()
+    if not user_to_bootstrap:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User to bootstrap not found")
+
+    user_to_bootstrap.is_admin = True
+    db.commit()
+    db.refresh(user_to_bootstrap)
+    return user_to_bootstrap
+
+@app.delete("/prompts/{prompt_id}", status_code=status.HTTP_200_OK)
 def increment_prompt_view(
     prompt_id: int, 
     db: Session = Depends(get_db),
