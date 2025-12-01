@@ -1,8 +1,1 @@
-[00:00:02.775] Server  LOG      ✓ Ready in 1731ms
-[00:00:05.832] Server  LOG      ○ Compiling /my-page ...
-[00:00:15.855] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:15.915] Server  ERROR   (node:21000) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
-(Use `node --trace-deprecation ...` to show where the warning was created)
-[00:00:16.943] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:16.943] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/my-page","route":"/my-page"}
-[00:00:16.943] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/my-page color: rgb(120, 120, 120) color: inherit {"dp":"/my-page","o":"http://localhost:3000/my-page","sdkn":"@vercel/analytics/next","sdkv":"1.3.1","sv":"0.1.3","ts":1764511387172}
+[00:00:03.701] Server  LOG      ✓ Ready in 2.5s
