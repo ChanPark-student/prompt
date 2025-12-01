@@ -1,32 +1,33 @@
-# Dependencies
+# Node
 node_modules
+.next
+npm-debug.log*
+yarn-error.log
 
-# Build output
-dist/
-build/
+# Python
+**/__pycache__
+*.pyc
+*.pyo
+**/venv
+.venv
+/backend/.promptB/
+/.prompt/
 
-# Next.js
-.next/
-next-env.d.ts
-*.log
+# Build artifacts
+build
+dist
+out
+
+# Local Environment & Temp
 .env
 .env.local
 .env.*.local
-
-# Python
-.prompt/
-backend/.promptB/
-__pycache__/
-*.pyc
-*.pyo
-
-# Database
 sql_app.db
+cli_prompt.txt
+gemini.txt
 
-# Misc
+# IDE & OS
+.vscode
+.idea
 .DS_Store
 *~
-npm-debug.log*
-yarn-error.log
-#talking.txt
-cli_prompt.txt
