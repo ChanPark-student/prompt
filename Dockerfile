@@ -41,7 +41,7 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY backend ./backend
 
 EXPOSE 3000
-EXPOSE 10000
+EXPOSE 8000
 
 RUN mkdir -p /var/log
 
