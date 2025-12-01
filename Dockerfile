@@ -33,6 +33,11 @@ RUN apt-get update && apt-get install -y supervisor
 # Copy Node.js runtime from the builder stage for consistency
 COPY --from=builder /usr/local/ /usr/local/
 
+# --- Temporary debugging lines for nextjs exit status 127 ---
+RUN which npm || echo "npm not found in PATH"
+RUN ls -l /usr/local/bin/npm /usr/local/bin/node || echo "Could not list npm/node in /usr/local/bin"
+# --- End temporary debugging lines ---
+
 # Copy the supervisord configuration file
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
