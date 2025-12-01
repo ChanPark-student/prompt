@@ -39,14 +39,30 @@ export default function Header({ onLogin, onSignup }: HeaderProps) {
         </button>
 
         <nav className="hidden md:flex items-center gap-4">
-          {isAuthenticated ? (
+          {user ? (
             <>
-              <Link href="/my-page" className="text-gray-600 hover:text-gray-900">
-                MY PAGE
-              </Link>
-              <Link href="/upload" className="text-gray-600 hover:text-gray-900">
-                UPLOAD
-              </Link>
+              {user.is_admin ? (
+                <>
+                  <Link href="/admin/school" className="text-gray-600 hover:text-gray-900">
+                    SCHOOL
+                  </Link>
+                  <Link href="/admin/subject" className="text-gray-600 hover:text-gray-900">
+                    SUBJECT
+                  </Link>
+                  <Link href="/admin/promote" className="text-gray-600 hover:text-gray-900">
+                    ADMIN
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <Link href="/my-page" className="text-gray-600 hover:text-gray-900">
+                    MY PAGE
+                  </Link>
+                  <Link href="/upload" className="text-gray-600 hover:text-gray-900">
+                    UPLOAD
+                  </Link>
+                </>
+              )}
               <button onClick={handleLogout} className="px-4 py-2 text-gray-600 hover:text-gray-900">
                 LOGOUT
               </button>

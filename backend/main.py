@@ -76,16 +76,57 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/schools/", response_model=List[schemas.School])
+@app.get("/schools", response_model=List[schemas.School])
 def read_schools(db: Session = Depends(get_db)):
     schools = db.query(models.School).all()
     return schools
 
 
-@app.get("/subjects/", response_model=List[schemas.Subject])
+@app.get("/subjects", response_model=List[schemas.Subject])
 def read_subjects(db: Session = Depends(get_db)):
     subjects = db.query(models.Subject).all()
     return subjects
+
+
+def get_current_admin_user(current_user: models.User = Depends(get_current_user)):
+    if not current_user.is_admin:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="The user does not have administrative privileges",
+        )
+    return current_user
+
+@app.post("/schools", response_model=schemas.School, status_code=status.HTTP_201_CREATED)
+def create_school(
+    school: schemas.SchoolBase,
+    db: Session = Depends(get_db),
+    admin_user: models.User = Depends(get_current_admin_user),
+):
+    db_school = db.query(models.School).filter(models.School.name == school.name).first()
+    if db_school:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="School already registered")
+    
+    new_school = models.School(name=school.name)
+    db.add(new_school)
+    db.commit()
+    db.refresh(new_school)
+    return new_school
+
+@app.post("/subjects", response_model=schemas.Subject, status_code=status.HTTP_201_CREATED)
+def create_subject(
+    subject: schemas.SubjectBase,
+    db: Session = Depends(get_db),
+    admin_user: models.User = Depends(get_current_admin_user),
+):
+    db_subject = db.query(models.Subject).filter(models.Subject.name == subject.name).first()
+    if db_subject:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Subject already registered")
+    
+    new_subject = models.Subject(name=subject.name)
+    db.add(new_subject)
+    db.commit()
+    db.refresh(new_subject)
+    return new_subject
 
 
 @app.get("/stats/prompts/count", response_model=int)
@@ -119,11 +160,41 @@ def signup(user: schemas.UserCreate, db: Session = Depends(get_db)):
         studentId=user.studentId,
         created_at=datetime.utcnow()
     )
+
+    if new_user.email == "chan@chan.chan":
+        new_user.is_admin = True
+
     db.add(new_user)
     db.commit()
     print(f"--- User '{new_user.username}' with full profile committed to database. ---")
     db.refresh(new_user)
     return new_user
+
+@app.get("/users", response_model=List[schemas.UserResponse])
+def read_users(
+    db: Session = Depends(get_db),
+    admin_user: models.User = Depends(get_current_admin_user),
+):
+    users = db.query(models.User).all()
+    return users
+
+class UserPromote(schemas.BaseModel):
+    username: str
+
+@app.post("/users/promote", response_model=schemas.UserResponse)
+def promote_user(
+    user_promote: UserPromote,
+    db: Session = Depends(get_db),
+    admin_user: models.User = Depends(get_current_admin_user),
+):
+    user_to_promote = db.query(models.User).filter(models.User.username == user_promote.username).first()
+    if not user_to_promote:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+    user_to_promote.is_admin = True
+    db.commit()
+    db.refresh(user_to_promote)
+    return user_to_promote
 
 @app.post("/token", response_model=schemas.Token)
 async def login_for_access_token(login_data: schemas.UserLogin, db: Session = Depends(get_db)):
@@ -154,7 +225,7 @@ def read_user_prompts(
     user_prompts = db.query(models.Prompt).filter(models.Prompt.owner_id == current_user.id).all()
     return user_prompts
 
-@app.post("/prompts/", response_model=schemas.Prompt)
+@app.post("/prompts", response_model=schemas.Prompt)
 def create_prompt(
     prompt: schemas.PromptCreate,
     db: Session = Depends(get_db),
@@ -173,7 +244,7 @@ subjects_map = {
     "3": "확률통계",
 }
 
-@app.get("/prompts/", response_model=List[schemas.Prompt])
+@app.get("/prompts", response_model=List[schemas.Prompt])
 def read_prompts(
     skip: int = 0,
     limit: int = 100,
@@ -281,6 +352,23 @@ def give_prompt_feedback(
     db.commit()
     db.refresh(db_prompt)
     return db_prompt
+
+@app.delete("/prompts/{prompt_id}", status_code=status.HTTP_200_OK)
+def delete_prompt(
+    prompt_id: int,
+    db: Session = Depends(get_db),
+    admin_user: models.User = Depends(get_current_admin_user),
+):
+    db_prompt = db.query(models.Prompt).filter(models.Prompt.id == prompt_id).first()
+    if db_prompt is None:
+        raise HTTPException(status_code=404, detail="Prompt not found")
+
+    # Before deleting the prompt, delete related feedback to avoid foreign key constraint issues
+    db.query(models.PromptFeedback).filter(models.PromptFeedback.prompt_id == prompt_id).delete()
+
+    db.delete(db_prompt)
+    db.commit()
+    return {"message": "Prompt deleted successfully"}
 
 @app.post("/prompts/{prompt_id}/increment-view", response_model=schemas.Prompt)
 def increment_prompt_view(

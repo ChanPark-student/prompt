@@ -2,28 +2,39 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from "next/link"
-import { useRouter } from "next/navigation" 
+import { useRouter } from "next/navigation"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import AuthModal from "@/components/auth-modal"
 import { useAuth, API_URL } from "@/lib/auth-context"
-import { Prompt } from "@/lib/mock-data"; // Keep for type, can be defined locally later
+
+interface Prompt {
+  id: number;
+  title: string;
+  content: string;
+  subject: string;
+  created_at: string;
+  owner_id: number;
+  views: number;
+  likes: number;
+  dislikes: number;
+  author: string;
+  current_user_feedback: "like" | "dislike" | null;
+}
 
 export default function PromptDetailPage({ params }: { params: { id: string } }) {
-  const router = useRouter() 
+  const router = useRouter()
   const [authModal, setAuthModal] = useState<"login" | "signup" | null>(null)
   
-  const { user, userProfile, loading: authLoading, token } = useAuth()
-  const isAuthenticated = !!user && !user.isAnonymous
+  const { user, loading: authLoading, token } = useAuth()
+  const isAuthenticated = !!user
 
   const [prompt, setPrompt] = useState<Prompt | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const resolvedParams = React.use(params);
-
   useEffect(() => {
     const fetchPrompt = async () => {
-      if (!resolvedParams.id) return;
+      if (!params.id) return;
       setLoading(true);
 
       const headers: HeadersInit = {};
@@ -32,7 +43,7 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
       }
 
       try {
-        const response = await fetch(`${API_URL}/prompts/${resolvedParams.id}`, { headers });
+        const response = await fetch(`${API_URL}/prompts/${params.id}`, { headers });
         if (!response.ok) {
           throw new Error("Prompt not found");
         }
@@ -47,7 +58,7 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
     };
 
     fetchPrompt();
-  }, [resolvedParams.id, token]);
+  }, [params.id, token]);
 
 
   const isAuthor = isAuthenticated && user && prompt && prompt.owner_id === user.id;
@@ -114,6 +125,35 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
       alert("피드백 처리 중 오류가 발생했습니다.");
     }
   };
+
+  const handleDelete = async () => {
+    if (!prompt || !token || !user?.is_admin) {
+      alert("You do not have permission to delete this prompt.");
+      return;
+    }
+
+    if (confirm("Are you sure you want to delete this prompt?")) {
+      try {
+        const response = await fetch(`${API_URL}/prompts/${prompt.id}`, {
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+
+        if (response.ok) {
+          alert("Prompt deleted successfully.");
+          router.push('/');
+        } else {
+          const errorData = await response.json();
+          alert(errorData.detail || "Failed to delete prompt.");
+        }
+      } catch (error) {
+        console.error("Failed to delete prompt", error);
+        alert("An error occurred while deleting the prompt.");
+      }
+    }
+  };
   
   if (loading || authLoading) {
     return (
@@ -135,8 +175,6 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
     )
   }
   
-  const schoolSearchPath = `/search?school=${encodeURIComponent(prompt.school)}`
-
   return (
     <>
       <Header
@@ -162,7 +200,7 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
               </svg>
             </div>
-            <span className="font-bold">{isAuthenticated ? userProfile?.name : "Guest"}</span>
+            <span className="font-bold">{isAuthenticated ? user?.name : "Guest"}</span>
           </div>
           <nav className="space-y-4">
             <Link href="/" className="flex items-center gap-2 text-gray-700 hover:text-gray-900">
@@ -178,9 +216,9 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
           <div className="max-w-4xl mx-auto">
                           <div className="mb-8">
                             <h1 className="text-3xl font-bold mb-4">{prompt.title}</h1>
-                            <p className="text-gray-600 mb-2">작성자: {prompt.author} | {prompt.date}</p>
+                            <p className="text-gray-600 mb-2">작성자: {prompt.author} | {new Date(prompt.created_at).toLocaleDateString()}</p>
                             <p className="text-gray-600">
-                              {prompt.school} {">"} {prompt.subject} | 조회수 {prompt.views || 0} | 추천수 {(prompt.likes || 0) - (prompt.dislikes || 0)}
+                              {prompt.subject} | 조회수 {prompt.views || 0} | 추천수 {(prompt.likes || 0) - (prompt.dislikes || 0)}
                             </p>
                           </div>
             <div className="relative mb-6">
@@ -204,9 +242,20 @@ export default function PromptDetailPage({ params }: { params: { id: string } })
               )}
             </div>
 
+            <div className="flex justify-end">
+              {user?.is_admin && (
+                <button
+                  onClick={handleDelete}
+                  className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700"
+                >
+                  Delete Prompt
+                </button>
+              )}
+            </div>
+
             {/* 5. 'isAuthor'가 false이고 'showFeedback'이 true일 때만 '좋아요/싫어요' 버튼을 표시합니다. */}
             {!isAuthor && showFeedback && (
-              <div className="flex justify-center items-center gap-4 p-4 bg-white rounded-lg shadow-sm">
+              <div className="flex justify-center items-center gap-4 p-4 bg-white rounded-lg shadow-sm mt-4">
                 <p className="font-medium text-gray-700">이 프롬프트가 유용했나요?</p>
                 <button 
                   onClick={() => handleFeedback('like')}

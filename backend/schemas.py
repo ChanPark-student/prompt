@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, field_validator
 from typing import Optional, List
 from datetime import datetime
 
@@ -51,9 +51,15 @@ class UserResponse(BaseModel):
     age: Optional[str]
     school: Optional[str]
     studentId: Optional[str]
+    is_admin: bool
 
     class Config:
         from_attributes = True
+
+    @field_validator('is_admin', mode='before')
+    @classmethod
+    def set_is_admin_default(cls, v):
+        return v or False
 
 class Token(BaseModel):
     access_token: str

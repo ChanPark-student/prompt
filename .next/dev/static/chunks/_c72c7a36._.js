@@ -162,7 +162,7 @@ const AuthProvider = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/lib/auth-context.tsx",
-        lineNumber: 183,
+        lineNumber: 184,
         columnNumber: 10
     }, ("TURBOPACK compile-time value", void 0));
 };

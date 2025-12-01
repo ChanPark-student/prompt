@@ -1,1 +1,5 @@
-{}
+{
+  "/admin/school/page": "app/admin/school/page.js",
+  "/page": "app/page.js",
+  "/search/page": "app/search/page.js"
+}
