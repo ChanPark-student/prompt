@@ -786,34 +786,51 @@ function SearchPage() {
     // ★★★ API에서 과목 목록을 가져오기 위한 새 State들 ★★★
     const [subjectsData, setSubjectsData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [loadingSubjects, setLoadingSubjects] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
-    // 과목 목록을 API에서 가져오는 useEffect
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "SearchPage.useEffect": ()=>{
-            async function fetchSubjects() {
+            async function fetchSubjectsForSchool() {
+                if (!school) {
+                    setLoadingSubjects(false);
+                    return;
+                }
                 try {
-                    const response = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_URL"]}/subjects/`);
-                    if (!response.ok) {
-                        throw new Error("Failed to fetch subjects");
+                    // 1. Fetch all schools to find the ID for the current school name
+                    const schoolsResponse = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_URL"]}/schools`);
+                    if (!schoolsResponse.ok) throw new Error("Failed to fetch schools");
+                    const schoolsData = await schoolsResponse.json();
+                    const currentSchool = schoolsData.find({
+                        "SearchPage.useEffect.fetchSubjectsForSchool.currentSchool": (s)=>s.name === school
+                    }["SearchPage.useEffect.fetchSubjectsForSchool.currentSchool"]);
+                    if (currentSchool) {
+                        // 2. Fetch subjects using the found school ID
+                        const subjectsResponse = await fetch(`${__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$auth$2d$context$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["API_URL"]}/subjects?school_id=${currentSchool.id}`);
+                        if (!subjectsResponse.ok) {
+                            throw new Error("Failed to fetch subjects");
+                        }
+                        const subjectsData = await subjectsResponse.json();
+                        setSubjectsData(subjectsData);
+                    } else {
+                        // School name not found, so no subjects to display
+                        setSubjectsData([]);
                     }
-                    const data = await response.json();
-                    setSubjectsData(data);
                 } catch (error) {
-                    console.error("Error fetching subjects:", error);
-                // 에러 발생 시 처리 (예: 사용자에게 알림)
+                    console.error("Error fetching data:", error);
                 } finally{
                     setLoadingSubjects(false);
                 }
             }
-            fetchSubjects();
+            fetchSubjectsForSchool();
         }
-    }["SearchPage.useEffect"], []);
+    }["SearchPage.useEffect"], [
+        school
+    ]);
     if (loading) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "flex justify-center items-center min-h-screen",
             children: "Loading..."
         }, void 0, false, {
             fileName: "[project]/app/search/page.tsx",
-            lineNumber: 49,
+            lineNumber: 65,
             columnNumber: 7
         }, this);
     }
@@ -824,7 +841,7 @@ function SearchPage() {
                 onSignup: ()=>setAuthModal("signup")
             }, void 0, false, {
                 fileName: "[project]/app/search/page.tsx",
-                lineNumber: 57,
+                lineNumber: 73,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -839,7 +856,7 @@ function SearchPage() {
                                 children: "← HOME"
                             }, void 0, false, {
                                 fileName: "[project]/app/search/page.tsx",
-                                lineNumber: 67,
+                                lineNumber: 83,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -847,7 +864,7 @@ function SearchPage() {
                                 children: selectedSchool
                             }, void 0, false, {
                                 fileName: "[project]/app/search/page.tsx",
-                                lineNumber: 70,
+                                lineNumber: 86,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -855,7 +872,7 @@ function SearchPage() {
                                 children: "과목을 선택하세요"
                             }, void 0, false, {
                                 fileName: "[project]/app/search/page.tsx",
-                                lineNumber: 71,
+                                lineNumber: 87,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -864,13 +881,13 @@ function SearchPage() {
                                     children: "과목을 불러오는 중..."
                                 }, void 0, false, {
                                     fileName: "[project]/app/search/page.tsx",
-                                    lineNumber: 75,
+                                    lineNumber: 91,
                                     columnNumber: 17
                                 }, this) : subjectsData.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: "과목이 없습니다."
                                 }, void 0, false, {
                                     fileName: "[project]/app/search/page.tsx",
-                                    lineNumber: 77,
+                                    lineNumber: 93,
                                     columnNumber: 17
                                 }, this) : subjectsData.map((subject)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: `/prompts/${subject.id}?school=${encodeURIComponent(selectedSchool)}`,
@@ -881,7 +898,7 @@ function SearchPage() {
                                                 children: subject.name
                                             }, void 0, false, {
                                                 fileName: "[project]/app/search/page.tsx",
-                                                lineNumber: 85,
+                                                lineNumber: 101,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -889,34 +906,34 @@ function SearchPage() {
                                                 children: "바로가기"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/search/page.tsx",
-                                                lineNumber: 86,
+                                                lineNumber: 102,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, subject.id, true, {
                                         fileName: "[project]/app/search/page.tsx",
-                                        lineNumber: 80,
+                                        lineNumber: 96,
                                         columnNumber: 19
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/app/search/page.tsx",
-                                lineNumber: 73,
+                                lineNumber: 89,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/search/page.tsx",
-                        lineNumber: 65,
+                        lineNumber: 81,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/search/page.tsx",
-                    lineNumber: 63,
+                    lineNumber: 79,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/search/page.tsx",
-                lineNumber: 62,
+                lineNumber: 78,
                 columnNumber: 7
             }, this),
             authModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$auth$2d$modal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -924,12 +941,12 @@ function SearchPage() {
                 onClose: ()=>setAuthModal(null)
             }, void 0, false, {
                 fileName: "[project]/app/search/page.tsx",
-                lineNumber: 96,
+                lineNumber: 112,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/search/page.tsx",
-                lineNumber: 102,
+                lineNumber: 118,
                 columnNumber: 7
             }, this)
         ]

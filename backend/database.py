@@ -100,13 +100,18 @@ class School(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, unique=True, index=True, nullable=False)
 
+    subjects = relationship("Subject", back_populates="school")
+
 
 # Define the Subject model
 class Subject(Base):
     __tablename__ = "subjects"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, unique=True, index=True, nullable=False)
+    name = Column(String, index=True, nullable=False)
+    school_id = Column(Integer, ForeignKey("schools.id"), nullable=False)
+
+    school = relationship("School", back_populates="subjects")
 
 
 # Function to get a database session

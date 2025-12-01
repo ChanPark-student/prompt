@@ -95,6 +95,10 @@ class School(SchoolBase):
 # Pydantic schema for Subject
 class SubjectBase(BaseModel):
     name: str
+    school_id: int
+
+class SubjectCreate(SubjectBase):
+    pass
 
 class Subject(SubjectBase):
     id: int

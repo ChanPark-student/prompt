@@ -1,16 +1,40 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useAuth, API_URL } from "@/lib/auth-context"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+
+interface School {
+  id: number;
+  name: string;
+}
 
 export default function AdminSubjectPage() {
   const { user, token } = useAuth()
   const [subjectName, setSubjectName] = useState("")
+  const [schools, setSchools] = useState<School[]>([])
+  const [selectedSchoolId, setSelectedSchoolId] = useState<string>("")
   const [message, setMessage] = useState("")
   const [error, setError] = useState("")
+
+  useEffect(() => {
+    const fetchSchools = async () => {
+      try {
+        const response = await fetch(`${API_URL}/schools`)
+        if (!response.ok) {
+          throw new Error("Failed to fetch schools")
+        }
+        const data = await response.json()
+        setSchools(data)
+      } catch (err: any) {
+        setError(err.message)
+      }
+    }
+    fetchSchools()
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -21,6 +45,10 @@ export default function AdminSubjectPage() {
       setError("You must be logged in to add a subject.")
       return
     }
+    if (!selectedSchoolId) {
+      setError("Please select a school.")
+      return
+    }
 
     try {
       const response = await fetch(`${API_URL}/subjects`, {
@@ -29,7 +57,7 @@ export default function AdminSubjectPage() {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ name: subjectName }),
+        body: JSON.stringify({ name: subjectName, school_id: parseInt(selectedSchoolId) }),
       })
 
       if (!response.ok) {
@@ -61,6 +89,18 @@ export default function AdminSubjectPage() {
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
+            <Select onValueChange={setSelectedSchoolId} value={selectedSchoolId}>
+              <SelectTrigger>
+                <SelectValue placeholder="Select a school" />
+              </SelectTrigger>
+              <SelectContent>
+                {schools.map((school) => (
+                  <SelectItem key={school.id} value={school.id.toString()}>
+                    {school.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
             <Input
               type="text"
               value={subjectName}

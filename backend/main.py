@@ -49,26 +49,12 @@ def create_school_if_not_exists(db: Session, school_name: str):
     else:
         print(f"--- School '{school_name}' already exists in database. ---")
 
-def create_subject_if_not_exists(db: Session, subject_name: str):
-    subject = db.query(Subject).filter(Subject.name == subject_name).first()
-    if not subject:
-        new_subject = Subject(name=subject_name)
-        db.add(new_subject)
-        db.commit()
-        db.refresh(new_subject)
-        print(f"--- Subject '{subject_name}' added to database. ---")
-    else:
-        print(f"--- Subject '{subject_name}' already exists in database. ---")
-
 @app.on_event("startup")
 def on_startup():
     create_db_and_tables()
     print("Database tables created!")
     db = next(get_db()) # Get a database session
     create_school_if_not_exists(db, "전남대학교")
-    create_subject_if_not_exists(db, "산업공학입문")
-    create_subject_if_not_exists(db, "경제성공학")
-    create_subject_if_not_exists(db, "확률통계")
     db.close() # Close the session
 
 @app.get("/")
@@ -83,8 +69,11 @@ def read_schools(db: Session = Depends(get_db)):
 
 
 @app.get("/subjects", response_model=List[schemas.Subject])
-def read_subjects(db: Session = Depends(get_db)):
-    subjects = db.query(models.Subject).all()
+def read_subjects(school_id: Optional[int] = None, db: Session = Depends(get_db)):
+    query = db.query(models.Subject)
+    if school_id:
+        query = query.filter(models.Subject.school_id == school_id)
+    subjects = query.all()
     return subjects
 
 
@@ -114,15 +103,15 @@ def create_school(
 
 @app.post("/subjects", response_model=schemas.Subject, status_code=status.HTTP_201_CREATED)
 def create_subject(
-    subject: schemas.SubjectBase,
+    subject: schemas.SubjectCreate,
     db: Session = Depends(get_db),
     admin_user: models.User = Depends(get_current_admin_user),
 ):
-    db_subject = db.query(models.Subject).filter(models.Subject.name == subject.name).first()
+    db_subject = db.query(models.Subject).filter(models.Subject.name == subject.name, models.Subject.school_id == subject.school_id).first()
     if db_subject:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Subject already registered")
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Subject already registered for this school")
     
-    new_subject = models.Subject(name=subject.name)
+    new_subject = models.Subject(name=subject.name, school_id=subject.school_id)
     db.add(new_subject)
     db.commit()
     db.refresh(new_subject)
@@ -178,16 +167,16 @@ def read_users(
     users = db.query(models.User).all()
     return users
 
-class UserPromote(schemas.BaseModel):
+class UserAction(schemas.BaseModel):
     username: str
 
 @app.post("/users/promote", response_model=schemas.UserResponse)
 def promote_user(
-    user_promote: UserPromote,
+    user_action: UserAction,
     db: Session = Depends(get_db),
     admin_user: models.User = Depends(get_current_admin_user),
 ):
-    user_to_promote = db.query(models.User).filter(models.User.username == user_promote.username).first()
+    user_to_promote = db.query(models.User).filter(models.User.username == user_action.username).first()
     if not user_to_promote:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
 
@@ -195,6 +184,24 @@ def promote_user(
     db.commit()
     db.refresh(user_to_promote)
     return user_to_promote
+
+@app.post("/users/demote", response_model=schemas.UserResponse)
+def demote_user(
+    user_action: UserAction,
+    db: Session = Depends(get_db),
+    admin_user: models.User = Depends(get_current_admin_user),
+):
+    if admin_user.username == user_action.username:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Cannot demote yourself")
+        
+    user_to_demote = db.query(models.User).filter(models.User.username == user_action.username).first()
+    if not user_to_demote:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+
+    user_to_demote.is_admin = False
+    db.commit()
+    db.refresh(user_to_demote)
+    return user_to_demote
 
 @app.post("/token", response_model=schemas.Token)
 async def login_for_access_token(login_data: schemas.UserLogin, db: Session = Depends(get_db)):
@@ -225,6 +232,13 @@ def read_user_prompts(
     user_prompts = db.query(models.Prompt).filter(models.Prompt.owner_id == current_user.id).all()
     return user_prompts
 
+@app.get("/subjects/{subject_id}", response_model=schemas.Subject)
+def read_subject(subject_id: int, db: Session = Depends(get_db)):
+    db_subject = db.query(models.Subject).filter(models.Subject.id == subject_id).first()
+    if db_subject is None:
+        raise HTTPException(status_code=404, detail="Subject not found")
+    return db_subject
+
 @app.post("/prompts", response_model=schemas.Prompt)
 def create_prompt(
     prompt: schemas.PromptCreate,
@@ -237,26 +251,23 @@ def create_prompt(
     db.refresh(db_prompt)
     return db_prompt
 
-# Temporary map to resolve subject_id to name, mirroring lib/subjects.ts
-subjects_map = {
-    "1": "산업공학입문",
-    "2": "경제성공학",
-    "3": "확률통계",
-}
-
 @app.get("/prompts", response_model=List[schemas.Prompt])
 def read_prompts(
     skip: int = 0,
     limit: int = 100,
-    subject_id: str | None = None,
+    subject_id: Optional[int] = None,
     db: Session = Depends(get_db),
     current_user: Optional[models.User] = Depends(get_current_user_or_none)
 ):
     query = db.query(models.Prompt)
 
-    if subject_id and subject_id in subjects_map:
-        subject_name = subjects_map[subject_id]
-        query = query.filter(models.Prompt.subject == subject_name)
+    if subject_id:
+        subject = db.query(models.Subject).filter(models.Subject.id == subject_id).first()
+        if subject:
+            query = query.filter(models.Prompt.subject == subject.name)
+        else:
+            # If subject_id is provided but not found, return no prompts
+            return []
     
     prompts = query.offset(skip).limit(limit).all()
 

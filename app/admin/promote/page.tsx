@@ -66,6 +66,39 @@ export default function AdminPromotePage() {
     }
   }
 
+  const handleDemote = async (username: string) => {
+    setError("")
+    setMessage("")
+
+    if (!token) {
+      setError("You must be logged in to demote a user.")
+      return
+    }
+
+    try {
+      const response = await fetch(`${API_URL}/users/demote`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ username }),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.detail || "Failed to demote user")
+      }
+
+      const updatedUser = await response.json()
+      setMessage(`User "${updatedUser.username}" has been demoted.`)
+      // Refresh the user list
+      setUsers(users.map(u => u.username === updatedUser.username ? { ...u, is_admin: false } : u))
+    } catch (err: any) {
+      setError(err.message)
+    }
+  }
+
   if (!user?.is_admin) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -78,7 +111,7 @@ export default function AdminPromotePage() {
     <div className="container mx-auto py-10">
       <Card className="max-w-2xl mx-auto">
         <CardHeader>
-          <CardTitle>Promote Users to Admin</CardTitle>
+          <CardTitle>Manage User Roles</CardTitle>
         </CardHeader>
         <CardContent>
           {message && <p className="mb-4 text-green-600">{message}</p>}
@@ -92,7 +125,9 @@ export default function AdminPromotePage() {
                 </div>
                 <div>
                   {u.is_admin ? (
-                    <span className="text-sm font-medium text-green-600">Admin</span>
+                    <Button variant="destructive" size="sm" onClick={() => handleDemote(u.username)} disabled={user?.id === u.id}>
+                      Demote
+                    </Button>
                   ) : (
                     <Button size="sm" onClick={() => handlePromote(u.username)}>
                       Promote to Admin

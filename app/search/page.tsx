@@ -23,25 +23,41 @@ export default function SearchPage() {
   const [subjectsData, setSubjectsData] = useState<Array<{ id: number; name: string }>>([])
   const [loadingSubjects, setLoadingSubjects] = useState(true)
 
-  // 과목 목록을 API에서 가져오는 useEffect
   useEffect(() => {
-    async function fetchSubjects() {
-      try {
-        const response = await fetch(`${API_URL}/subjects/`)
-        if (!response.ok) {
-          throw new Error("Failed to fetch subjects")
-        }
-        const data = await response.json()
-        setSubjectsData(data)
-      } catch (error) {
-        console.error("Error fetching subjects:", error)
-        // 에러 발생 시 처리 (예: 사용자에게 알림)
-      } finally {
+    async function fetchSubjectsForSchool() {
+      if (!school) {
         setLoadingSubjects(false)
+        return;
+      }
+
+      try {
+        // 1. Fetch all schools to find the ID for the current school name
+        const schoolsResponse = await fetch(`${API_URL}/schools`);
+        if (!schoolsResponse.ok) throw new Error("Failed to fetch schools");
+        const schoolsData = await schoolsResponse.json();
+        
+        const currentSchool = schoolsData.find((s: { name: string; }) => s.name === school);
+        
+        if (currentSchool) {
+          // 2. Fetch subjects using the found school ID
+          const subjectsResponse = await fetch(`${API_URL}/subjects?school_id=${currentSchool.id}`);
+          if (!subjectsResponse.ok) {
+            throw new Error("Failed to fetch subjects");
+          }
+          const subjectsData = await subjectsResponse.json();
+          setSubjectsData(subjectsData);
+        } else {
+          // School name not found, so no subjects to display
+          setSubjectsData([]);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoadingSubjects(false);
       }
     }
-    fetchSubjects()
-  }, [])
+    fetchSubjectsForSchool()
+  }, [school])
 
 
   if (loading) {
