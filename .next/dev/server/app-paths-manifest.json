@@ -1,7 +1,4 @@
 {
-  "/admin/promote/page": "app/admin/promote/page.js",
   "/admin/school/page": "app/admin/school/page.js",
-  "/admin/subject/page": "app/admin/subject/page.js",
-  "/page": "app/page.js",
-  "/search/page": "app/search/page.js"
+  "/page": "app/page.js"
 }

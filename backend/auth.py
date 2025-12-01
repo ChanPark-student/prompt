@@ -6,6 +6,7 @@ from fastapi.security import OAuth2PasswordBearer
 from fastapi import Depends, HTTPException, status
 from jose import JWTError, jwt
 from passlib.context import CryptContext
+import os
 from datetime import datetime, timedelta
 
 # OAuth2 scheme
@@ -15,7 +16,9 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token", auto_error=False)
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # JWT configuration
-SECRET_KEY = "your-secret-key"  # Change this in production!
+SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
+if SECRET_KEY == "your-secret-key":
+    print("WARNING: Using default SECRET_KEY. Please set a strong SECRET_KEY environment variable for production.")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 

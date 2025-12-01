@@ -1,18 +1,7 @@
-1/1
+README.md
+supervisord.conf
+Dockerfile
+.gitignore
 
-Next.js 16.0.0 (stale)Turbopack
-Build Error
-Ecmascript file had an error
-./app/prompts/[id]/page.tsx (1:27)
-Ecmascript file had an error
-> 1 | import React, { useState, useEffect } from 'react'
-    |                           ^^^^^^^^^
-  2 | import Link from "next/link"
-  3 | import Header from "@/components/header"
-  4 | import Footer from "@/components/footer"
-
-You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
-
- Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
-1
-2
+재작성 ㄱㄱ
+그리고 해당 파일들에는 주석을 담지 않을 것.
