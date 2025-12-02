@@ -1,6 +1,7 @@
 from pydantic import BaseModel, EmailStr
 from typing import Optional, List
 from datetime import datetime
+from pydantic import field_validator # Import field_validator for UserResponse
 
 # Pydantic schema for Prompt
 class PromptBase(BaseModel):
@@ -51,9 +52,16 @@ class UserResponse(BaseModel):
     age: Optional[str]
     school: Optional[str]
     studentId: Optional[str]
+    is_admin: bool # is_admin is bool after validator
 
     class Config:
         from_attributes = True
+
+    @field_validator('is_admin', mode='before')
+    @classmethod
+    def set_is_admin_default(cls, v):
+        return v or False
+
 
 class Token(BaseModel):
     access_token: str
@@ -89,9 +97,17 @@ class School(SchoolBase):
 # Pydantic schema for Subject
 class SubjectBase(BaseModel):
     name: str
+    school_id: int # Add school_id to SubjectBase
+
+class SubjectCreate(SubjectBase): # New schema for creation
+    pass
 
 class Subject(SubjectBase):
     id: int
 
     class Config:
         from_attributes = True
+
+# Schema for user actions like promote/demote/bootstrap
+class UserAction(BaseModel):
+    username: str

@@ -24,7 +24,7 @@ out
 .env.*.local
 sql_app.db
 cli_prompt.txt
-gemini.txt
+
 
 # IDE & OS
 .vscode
