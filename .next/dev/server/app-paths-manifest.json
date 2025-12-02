@@ -1,4 +1,10 @@
 {
+  "/admin/promote/page": "app/admin/promote/page.js",
   "/admin/school/page": "app/admin/school/page.js",
-  "/page": "app/page.js"
+  "/admin/subject/page": "app/admin/subject/page.js",
+  "/my-page/page": "app/my-page/page.js",
+  "/page": "app/page.js",
+  "/prompts/[id]/page": "app/prompts/[id]/page.js",
+  "/search/page": "app/search/page.js",
+  "/upload/page": "app/upload/page.js"
 }
