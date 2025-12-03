@@ -152,7 +152,7 @@ def signup(user: schemas.UserCreate, db: Session = Depends(get_db)):
         gender=user.gender,
         age=user.age,
         school=user.school,
-        studentId=user.studentId,
+        student_id=user.student_id,
         created_at=datetime.utcnow()
     )
 

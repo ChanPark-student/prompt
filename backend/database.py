@@ -87,7 +87,7 @@ class User(Base):
     gender = Column(String, nullable=True)
     age = Column(String, nullable=True)
     school = Column(String, nullable=True)
-    studentId = Column(String, name="student_id", nullable=True) # Use 'student_id' as column name for convention
+    student_id = Column(String, nullable=True)
 
     prompts = relationship("Prompt", back_populates="owner")
     feedback = relationship("PromptFeedback", back_populates="user")

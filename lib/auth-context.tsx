@@ -15,7 +15,7 @@ export interface UserProfile {
   gender?: string;
   age?: string;
   school?: string;
-  studentId?: string;
+  student_id?: string;
   is_active: boolean;
   is_admin: boolean;
   created_at: string;

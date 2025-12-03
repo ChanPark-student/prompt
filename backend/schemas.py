@@ -35,7 +35,7 @@ class UserCreate(UserBase):
     gender: str
     age: str
     school: str
-    studentId: str
+    student_id: str
 
 class UserLogin(BaseModel):
     username: str
@@ -50,7 +50,7 @@ class UserResponse(BaseModel):
     gender: Optional[str]
     age: Optional[str]
     school: Optional[str]
-    studentId: Optional[str]
+    student_id: Optional[str]
     is_admin: bool
 
     class Config:

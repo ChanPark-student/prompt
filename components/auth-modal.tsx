@@ -25,7 +25,7 @@ export default function AuthModal({ mode, onClose }: AuthModalProps) {
     gender: '',
     age: '',
     school: '',
-    studentId: '',
+    student_id: '',
   })
 
   const { login, signupAndCreateProfile } = useAuth()
@@ -186,7 +186,7 @@ export default function AuthModal({ mode, onClose }: AuthModalProps) {
             </div>
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700 mb-1">학번</label>
-              <input type="text" name="studentId" value={profile.studentId} onChange={handleProfileChange} className="w-full px-3 py-2 border border-gray-300 rounded-md" required />
+              <input type="text" name="student_id" value={profile.student_id} onChange={handleProfileChange} className="w-full px-3 py-2 border border-gray-300 rounded-md" required />
             </div>
 
             <div className="flex gap-4">

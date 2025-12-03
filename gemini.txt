@@ -1,7 +1,1 @@
-README.md
-supervisord.conf
-Dockerfile
-.gitignore
-
-재작성 ㄱㄱ
-그리고 해당 파일들에는 주석을 담지 않을 것.
+.
