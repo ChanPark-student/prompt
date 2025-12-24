@@ -152,8 +152,7 @@ def signup(user: schemas.UserCreate, db: Session = Depends(get_db)):
         gender=user.gender,
         age=user.age,
         school=user.school,
-        student_id=user.student_id,
-        created_at=datetime.utcnow()
+        student_id=user.student_id
     )
 
     if new_user.email == "chan@chan.chan":
