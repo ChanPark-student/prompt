@@ -159,9 +159,17 @@ def signup(user: schemas.UserCreate, db: Session = Depends(get_db)):
         new_user.is_admin = True
 
     db.add(new_user)
-    db.commit()
+    try:
+        db.commit()
+        db.refresh(new_user)
+    except Exception as e:
+        print(f"--- DATABASE COMMIT ERROR in signup: {e} ---")
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"An error occurred while creating the user: {e}",
+        )
     print(f"--- User '{new_user.username}' with full profile committed to database. ---")
-    db.refresh(new_user)
     return new_user
 
 @app.get("/users", response_model=List[schemas.UserResponse])
